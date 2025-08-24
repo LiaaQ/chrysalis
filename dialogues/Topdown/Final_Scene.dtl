@@ -1,0 +1,43 @@
+Companion: Hey.
+Companion: You're still here.
+- Was this all... real?
+	Companion: Real enough to feel it.
+	Companion: Real enough to leave something behind.
+- Did I actually help anyone?
+	Companion: You didn’t fix anyone.
+	Companion: You saw them and helped them understand themselves.
+	Companion: That was enough.
+- I don’t know what to do now.
+	Companion: You don’t have to know.
+	Companion: Just keep going with the flow.
+
+Companion: You helped people see their shadows.
+Companion: And you didn’t turn away from yours.
+- But I didn’t fix myself.
+	Companion: Healing isn’t a checklist.
+	Companion: It’s showing up again and again.
+- What if I mess something up?
+	Companion: You will.
+	Companion: And you’ll learn. Like everyone else.
+
+Companion: You’ve seen what pain can do.
+Companion: But you’ve also seen what understanding can do.
+Companion: And that matters.
+- So what happens now?
+	Companion: There’s no “done.”
+	Companion: Just steps.
+	Companion: Just people.
+	Companion: Just you, trying.
+- Am I done?
+	Companion: There’s no “done.”
+	Companion: Just steps.
+	Companion: Just people.
+	Companion: Just you, trying.
+- Was this enough?
+	Companion: Enough isn’t a finish line.
+	Companion: It’s what you carry forward.
+
+Companion: Hey.
+Companion: You have your own Chrysalis in you.
+Companion: Keep going.
+[signal arg="end"]

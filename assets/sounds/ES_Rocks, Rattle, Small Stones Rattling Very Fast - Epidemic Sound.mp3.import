@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dqxxxej4jhij6"
+path="res://.godot/imported/ES_Rocks, Rattle, Small Stones Rattling Very Fast - Epidemic Sound.mp3-0f1d9485de1fbef15ea1312602937546.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/ES_Rocks, Rattle, Small Stones Rattling Very Fast - Epidemic Sound.mp3"
+dest_files=["res://.godot/imported/ES_Rocks, Rattle, Small Stones Rattling Very Fast - Epidemic Sound.mp3-0f1d9485de1fbef15ea1312602937546.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

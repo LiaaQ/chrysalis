@@ -1,0 +1,228 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnoaopijiw4i6"]
+
+[ext_resource type="Script" uid="uid://dr2rlwullamx5" path="res://scripts/UI/pause_menu.gd" id="1_qo2fb"]
+[ext_resource type="FontFile" uid="uid://co0mbsq2nbccw" path="res://assets/ui/fonts/alagard.ttf" id="2_w67w4"]
+[ext_resource type="StyleBox" uid="uid://ovoy38erf3ti" path="res://assets/ui/buttons/purple_hover.tres" id="3_sipkl"]
+[ext_resource type="StyleBox" uid="uid://cn505ifccjkif" path="res://assets/ui/buttons/purple_press.tres" id="4_eir0s"]
+[ext_resource type="StyleBox" uid="uid://btux3p7jtdtjp" path="res://assets/ui/buttons/purple_normal.tres" id="5_3pfkw"]
+
+[sub_resource type="FontVariation" id="FontVariation_xovtl"]
+base_font = ExtResource("2_w67w4")
+
+[sub_resource type="FontVariation" id="FontVariation_w67w4"]
+base_font = ExtResource("2_w67w4")
+
+[node name="pause_menu" type="Control"]
+process_mode = 3
+visibility_layer = 515
+z_index = 1000
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qo2fb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = -140.0
+offset_right = 186.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_xovtl")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("3_sipkl")
+theme_override_styles/pressed = ExtResource("4_eir0s")
+theme_override_styles/normal = ExtResource("5_3pfkw")
+text = "Continue"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_xovtl")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("3_sipkl")
+theme_override_styles/pressed = ExtResource("4_eir0s")
+theme_override_styles/normal = ExtResource("5_3pfkw")
+text = "Controls"
+
+[node name="Button4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_xovtl")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("3_sipkl")
+theme_override_styles/pressed = ExtResource("4_eir0s")
+theme_override_styles/normal = ExtResource("5_3pfkw")
+text = "Main Menu"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_xovtl")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("3_sipkl")
+theme_override_styles/pressed = ExtResource("4_eir0s")
+theme_override_styles/normal = ExtResource("5_3pfkw")
+text = "Quit"
+
+[node name="Control" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect2" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 653.0
+color = Color(0.482353, 0.478431, 0.705882, 1)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 174.0
+offset_right = 642.0
+offset_bottom = 458.0
+
+[node name="E2" type="Label" parent="Control/VBoxContainer2"]
+process_mode = 3
+z_index = 10
+layout_mode = 2
+theme_override_colors/font_color = Color(0.933333, 0.701961, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_w67w4")
+theme_override_font_sizes/font_size = 46
+text = "Shift - Sprint"
+
+[node name="E3" type="Label" parent="Control/VBoxContainer2"]
+process_mode = 3
+z_index = 10
+layout_mode = 2
+theme_override_colors/font_color = Color(0.933333, 0.701961, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_w67w4")
+theme_override_font_sizes/font_size = 46
+text = "Space - Jump"
+
+[node name="E4" type="Label" parent="Control/VBoxContainer2"]
+process_mode = 3
+z_index = 10
+layout_mode = 2
+theme_override_colors/font_color = Color(0.933333, 0.701961, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_w67w4")
+theme_override_font_sizes/font_size = 46
+text = "Hold Space - Jump higher"
+
+[node name="E5" type="Label" parent="Control/VBoxContainer2"]
+process_mode = 3
+z_index = 10
+layout_mode = 2
+theme_override_colors/font_color = Color(0.933333, 0.701961, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_w67w4")
+theme_override_font_sizes/font_size = 46
+text = "Left Mouse Button - Attack"
+
+[node name="E6" type="Label" parent="Control/VBoxContainer2"]
+process_mode = 3
+z_index = 10
+layout_mode = 2
+theme_override_colors/font_color = Color(0.933333, 0.701961, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_w67w4")
+theme_override_font_sizes/font_size = 46
+text = "WASD / Arrows - Movement"
+
+[node name="E" type="Label" parent="Control/VBoxContainer2"]
+process_mode = 3
+z_index = 10
+layout_mode = 2
+theme_override_colors/font_color = Color(0.933333, 0.701961, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_w67w4")
+theme_override_font_sizes/font_size = 46
+text = "E - Interact"
+
+[node name="Platformer" type="Label" parent="Control"]
+process_mode = 3
+z_index = 10
+layout_mode = 0
+offset_left = 155.0
+offset_top = 36.0
+offset_right = 514.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_w67w4")
+theme_override_font_sizes/font_size = 71
+text = "Platformer"
+
+[node name="Top-Down" type="Label" parent="Control"]
+process_mode = 3
+z_index = 10
+layout_mode = 0
+offset_left = 711.0
+offset_top = 35.0
+offset_right = 1070.0
+offset_bottom = 174.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_w67w4")
+theme_override_font_sizes/font_size = 71
+text = "Top-Down
+"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 735.0
+offset_top = 174.0
+offset_right = 1328.0
+offset_bottom = 458.0
+
+[node name="E" type="Label" parent="Control/VBoxContainer3"]
+process_mode = 3
+z_index = 10
+layout_mode = 2
+theme_override_colors/font_color = Color(0.933333, 0.701961, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_w67w4")
+theme_override_font_sizes/font_size = 46
+text = "E - Interact"
+
+[node name="E6" type="Label" parent="Control/VBoxContainer3"]
+process_mode = 3
+z_index = 10
+layout_mode = 2
+theme_override_colors/font_color = Color(0.933333, 0.701961, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_w67w4")
+theme_override_font_sizes/font_size = 46
+text = "WASD / Arrows
+ - Movement"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]

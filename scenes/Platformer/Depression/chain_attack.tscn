@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://db6dxp0ikngo5"]
+
+[ext_resource type="Texture2D" uid="uid://6l8eftmy6x47" path="res://assets/platformer/depression/boss_fight/single_chain.png" id="1_lkk3q"]
+[ext_resource type="Script" uid="uid://c6mps3cqjw14b" path="res://scripts/platformer/chain_attack.gd" id="1_p4eln"]
+[ext_resource type="AudioStream" uid="uid://cpabvm4gdapwx" path="res://assets/sounds/chain.mp3" id="3_ol6ar"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_p4eln"]
+diffuse_texture = ExtResource("1_lkk3q")
+texture_repeat = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ol6ar"]
+size = Vector2(50, 24)
+
+[node name="Chain_Attack" type="Area2D"]
+z_index = 1
+script = ExtResource("1_p4eln")
+possible_keys = Array[String](["w", "a", "s", "d", "e", "q", "c", "x", "y", "r"])
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("CanvasTexture_p4eln")
+region_enabled = true
+region_rect = Rect2(0, 0, 0, 29.823)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_ol6ar")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ol6ar")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

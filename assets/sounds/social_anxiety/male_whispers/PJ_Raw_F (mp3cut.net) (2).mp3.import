@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b14arochxeg7m"
+path="res://.godot/imported/PJ_Raw_F (mp3cut.net) (2).mp3-066537962c4940e15c7b15a56a88a370.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/social_anxiety/male_whispers/PJ_Raw_F (mp3cut.net) (2).mp3"
+dest_files=["res://.godot/imported/PJ_Raw_F (mp3cut.net) (2).mp3-066537962c4940e15c7b15a56a88a370.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

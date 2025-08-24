@@ -1,0 +1,5 @@
+Sarah: It was locked.
+Sarah: Like it always is.
+[wait time="2.0"]
+Sarah: Even though I know I'll be worried again when I get to bed...
+[signal arg="locked_door"]

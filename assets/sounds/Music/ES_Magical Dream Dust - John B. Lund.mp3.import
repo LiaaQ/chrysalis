@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://brguyjqq6463w"
+path="res://.godot/imported/ES_Magical Dream Dust - John B. Lund.mp3-2e70aa08d75faf5ec5556382e55aa777.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Music/ES_Magical Dream Dust - John B. Lund.mp3"
+dest_files=["res://.godot/imported/ES_Magical Dream Dust - John B. Lund.mp3-2e70aa08d75faf5ec5556382e55aa777.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

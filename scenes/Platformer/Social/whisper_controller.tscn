@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://blirm8qegx021"]
+
+[ext_resource type="Script" uid="uid://d4f4qb6yk8rml" path="res://scripts/platformer/social/whisper_controller.gd" id="1_5s51n"]
+
+[node name="WhisperController" type="Node2D"]
+script = ExtResource("1_5s51n")

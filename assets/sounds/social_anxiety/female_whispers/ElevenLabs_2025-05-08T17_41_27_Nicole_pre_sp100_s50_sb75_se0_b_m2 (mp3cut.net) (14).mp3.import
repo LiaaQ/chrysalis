@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bw3sekiggi4wh"
+path="res://.godot/imported/ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (14).mp3-7efdb281537f5c043aeb046b6b49b34b.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/social_anxiety/female_whispers/ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (14).mp3"
+dest_files=["res://.godot/imported/ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (14).mp3-7efdb281537f5c043aeb046b6b49b34b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

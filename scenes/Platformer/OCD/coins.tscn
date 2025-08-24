@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0ghsejq0d7ne"]
+
+[ext_resource type="Script" uid="uid://blqpuc1ym3odd" path="res://scripts/platformer/ocd/coins.gd" id="1_2xqq1"]
+
+[node name="Coins" type="Area2D"]
+script = ExtResource("1_2xqq1")
+
+[node name="Fail" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Success" type="AudioStreamPlayer2D" parent="."]

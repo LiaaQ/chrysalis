@@ -1,0 +1,111 @@
+[gd_scene load_steps=8 format=3 uid="uid://co0cr4n4n2o7e"]
+
+[ext_resource type="Script" uid="uid://cn4fnh407roye" path="res://scripts/UI/main_menu.gd" id="1_e2p27"]
+[ext_resource type="FontFile" uid="uid://co0mbsq2nbccw" path="res://assets/ui/fonts/alagard.ttf" id="1_yonvy"]
+[ext_resource type="StyleBox" uid="uid://btux3p7jtdtjp" path="res://assets/ui/buttons/purple_normal.tres" id="2_5jstl"]
+[ext_resource type="StyleBox" uid="uid://ovoy38erf3ti" path="res://assets/ui/buttons/purple_hover.tres" id="2_tfcbk"]
+[ext_resource type="StyleBox" uid="uid://cn505ifccjkif" path="res://assets/ui/buttons/purple_press.tres" id="3_tfcbk"]
+
+[sub_resource type="FontVariation" id="FontVariation_tfcbk"]
+base_font = ExtResource("1_yonvy")
+
+[sub_resource type="FontVariation" id="FontVariation_e2p27"]
+base_font = ExtResource("1_yonvy")
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e2p27")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+z_index = 10
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = -62.0
+offset_right = 186.0
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_tfcbk")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("2_tfcbk")
+theme_override_styles/pressed = ExtResource("3_tfcbk")
+theme_override_styles/normal = ExtResource("2_5jstl")
+text = "Continue"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_tfcbk")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("2_tfcbk")
+theme_override_styles/pressed = ExtResource("3_tfcbk")
+theme_override_styles/normal = ExtResource("2_5jstl")
+text = "New game"
+
+[node name="Button4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_tfcbk")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("2_tfcbk")
+theme_override_styles/pressed = ExtResource("3_tfcbk")
+theme_override_styles/normal = ExtResource("2_5jstl")
+text = "Checkpoints"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_tfcbk")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("2_tfcbk")
+theme_override_styles/pressed = ExtResource("3_tfcbk")
+theme_override_styles/normal = ExtResource("2_5jstl")
+text = "Quit"
+
+[node name="Chrysalis" type="Label" parent="."]
+process_mode = 3
+z_index = 10
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -517.0
+offset_top = 50.0
+offset_right = 136.0
+offset_bottom = 197.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.564316, 0.860311, 0.753408, 1)
+theme_override_fonts/font = SubResource("FontVariation_e2p27")
+theme_override_font_sizes/font_size = 156
+text = "Chrysalis"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 653.0
+mouse_filter = 2
+color = Color(0.480418, 0.477443, 0.705935, 1)
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]

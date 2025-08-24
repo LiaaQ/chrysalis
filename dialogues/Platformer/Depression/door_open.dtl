@@ -1,0 +1,6 @@
+Companion: Okay, let's see what awaits us behind this door! Are you ready?
+- Let's do it!
+	Companion: Yay!
+	[signal arg="start"]
+- I need a bit more time..
+	Companion: No worries! Take all the time you need!

@@ -1,0 +1,10 @@
+Sarah: Ugh, I didn't even notice how messy that bookshelf is!
+Sarah: Just another thing to be anxious about now...
+Sarah: I just wanted one night of good sleep...
+[signal arg="companion_fadein"]
+[wait time="1.0"]
+Companion: Looks like someone could use a hand.
+Sarah: What the—?! Who are you?!
+Companion: No time for questions. Just trust me — tonight, we fix this.
+Sarah: Fix what?! Wait, what’s going on—
+[signal arg="OCD_platformer_start"]

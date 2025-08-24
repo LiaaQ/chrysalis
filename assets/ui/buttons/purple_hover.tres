@@ -1,0 +1,17 @@
+[gd_resource type="StyleBoxFlat" format=3 uid="uid://ovoy38erf3ti"]
+
+[resource]
+bg_color = Color(0.499418, 0.397962, 0.783601, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.35036, 0.253888, 0.588647, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.223103, 0.223103, 0.223103, 0.6)
+shadow_size = 4
+shadow_offset = Vector2(-1.865, 2.295)

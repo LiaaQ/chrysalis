@@ -1,0 +1,207 @@
+[gd_scene load_steps=7 format=3 uid="uid://yib060hj5plg"]
+
+[ext_resource type="Script" uid="uid://cndnplav7qvuw" path="res://scripts/UI/checkpoints.gd" id="1_64jly"]
+[ext_resource type="FontFile" uid="uid://co0mbsq2nbccw" path="res://assets/ui/fonts/alagard.ttf" id="2_yvf53"]
+[ext_resource type="StyleBox" uid="uid://ovoy38erf3ti" path="res://assets/ui/buttons/purple_hover.tres" id="3_x4a6w"]
+[ext_resource type="StyleBox" uid="uid://cn505ifccjkif" path="res://assets/ui/buttons/purple_press.tres" id="4_638hi"]
+[ext_resource type="StyleBox" uid="uid://btux3p7jtdtjp" path="res://assets/ui/buttons/purple_normal.tres" id="5_pcv4v"]
+
+[sub_resource type="FontVariation" id="FontVariation_a1vad"]
+base_font = ExtResource("2_yvf53")
+
+[node name="Checkpoints" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_64jly")
+
+[node name="VBoxLeft" type="VBoxContainer" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -529.0
+offset_top = -193.0
+offset_right = -20.0
+offset_bottom = 211.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Depression_Platformer" type="Button" parent="VBoxLeft"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_a1vad")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("3_x4a6w")
+theme_override_styles/pressed = ExtResource("4_638hi")
+theme_override_styles/normal = ExtResource("5_pcv4v")
+text = "Depression Platformer"
+
+[node name="Depression_Bossfight" type="Button" parent="VBoxLeft"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_a1vad")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("3_x4a6w")
+theme_override_styles/pressed = ExtResource("4_638hi")
+theme_override_styles/normal = ExtResource("5_pcv4v")
+text = "Depression Bossfight"
+
+[node name="Depression_Room_After" type="Button" parent="VBoxLeft"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_a1vad")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("3_x4a6w")
+theme_override_styles/pressed = ExtResource("4_638hi")
+theme_override_styles/normal = ExtResource("5_pcv4v")
+text = "Arachno Top-down"
+
+[node name="Arachnophobia_Platformer" type="Button" parent="VBoxLeft"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_a1vad")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("3_x4a6w")
+theme_override_styles/pressed = ExtResource("4_638hi")
+theme_override_styles/normal = ExtResource("5_pcv4v")
+text = "Arachno Platformer"
+
+[node name="Arachnophobia_After" type="Button" parent="VBoxLeft"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_a1vad")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("3_x4a6w")
+theme_override_styles/pressed = ExtResource("4_638hi")
+theme_override_styles/normal = ExtResource("5_pcv4v")
+text = "Social Anxiety Top-Down"
+
+[node name="Social_Platformer" type="Button" parent="VBoxLeft"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_a1vad")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("3_x4a6w")
+theme_override_styles/pressed = ExtResource("4_638hi")
+theme_override_styles/normal = ExtResource("5_pcv4v")
+text = "Social Anxiety Platformer"
+
+[node name="VBoxRight" type="VBoxContainer" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 13.0
+offset_top = -195.0
+offset_right = 492.0
+offset_bottom = 209.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Social_Bossfight" type="Button" parent="VBoxRight"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_a1vad")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("3_x4a6w")
+theme_override_styles/pressed = ExtResource("4_638hi")
+theme_override_styles/normal = ExtResource("5_pcv4v")
+text = "Social Anxiety Bossfight"
+
+[node name="Social_After" type="Button" parent="VBoxRight"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_a1vad")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("3_x4a6w")
+theme_override_styles/pressed = ExtResource("4_638hi")
+theme_override_styles/normal = ExtResource("5_pcv4v")
+text = "OCD Top-Down"
+
+[node name="OCD_Bossfight" type="Button" parent="VBoxRight"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_a1vad")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("3_x4a6w")
+theme_override_styles/pressed = ExtResource("4_638hi")
+theme_override_styles/normal = ExtResource("5_pcv4v")
+text = "OCD Bossfight"
+
+[node name="OCD_After" type="Button" parent="VBoxRight"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_a1vad")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("3_x4a6w")
+theme_override_styles/pressed = ExtResource("4_638hi")
+theme_override_styles/normal = ExtResource("5_pcv4v")
+text = "Nycto Top-Down"
+
+[node name="Nyctophobia_Platformer" type="Button" parent="VBoxRight"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_a1vad")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("3_x4a6w")
+theme_override_styles/pressed = ExtResource("4_638hi")
+theme_override_styles/normal = ExtResource("5_pcv4v")
+text = "Nycto Platformer"
+
+[node name="Nyctophobia_After" type="Button" parent="VBoxRight"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_a1vad")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("3_x4a6w")
+theme_override_styles/pressed = ExtResource("4_638hi")
+theme_override_styles/normal = ExtResource("5_pcv4v")
+text = "Final Top-Down"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 659.0
+mouse_filter = 2
+color = Color(0.482353, 0.478431, 0.705882, 1)
+
+[node name="Go_Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 688.0
+offset_top = 583.0
+offset_right = 1133.0
+offset_bottom = 642.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.746557, 0.790787, 0.869537, 1)
+theme_override_fonts/font = SubResource("FontVariation_a1vad")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover = ExtResource("3_x4a6w")
+theme_override_styles/pressed = ExtResource("4_638hi")
+theme_override_styles/normal = ExtResource("5_pcv4v")
+text = "Go back"
+
+[connection signal="pressed" from="Go_Back" to="." method="_on_go_back_pressed"]

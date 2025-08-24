@@ -1,0 +1,8 @@
+Sarah: My sweet warm bed...
+[wait time="5.0"]
+[signal arg="lights_off"]
+Sarah: HUH?!
+Sarah: Did the power go out?!
+Sarah: I can't rest like this!
+Sarah: Oh my god, are those footsteps...
+[signal arg="nycto_start"]

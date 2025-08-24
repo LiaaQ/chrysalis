@@ -1,0 +1,19 @@
+Companion: You did it!
+Companion: Darkness doesn't necessarily have to mean danger.
+Companion: Our head sees danger... even when there isn’t any.
+Companion: But you kept going. You sat with the fear.
+Companion: And look — the shadows didn’t swallow you.
+Companion: They just… passed.
+
+Chrysalis: So that’s it? Just wait it out?
+- That still feels terrifying.
+- I didn’t really “win,” though.
+	Companion: It's not about winning. It's about not running.
+- I thought something would jump out at any moment.
+
+Companion: You showed up. You stayed. That’s enough.
+Companion: Fear can be loud, but it doesn't always mean stop.
+Companion: And hey... next time it feels too dark?
+Companion: Just remember what you did here.
+Companion: You lit a path by walking it.
+[signal arg="leave"]

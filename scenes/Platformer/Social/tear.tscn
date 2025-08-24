@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://26rnavx82rnc"]
+
+[ext_resource type="Script" uid="uid://ddrswfiepprae" path="res://scripts/platformer/social/tear.gd" id="1_dhyql"]
+[ext_resource type="Texture2D" uid="uid://bl1xqyi6qclq0" path="res://assets/platformer/social_anxiety/floating_eye/tear.png" id="2_o6ifw"]
+
+[node name="Tear" type="Area2D"]
+script = ExtResource("1_dhyql")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_o6ifw")
+offset = Vector2(0, 4.965)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, -1, 1, -2, 2, -2, 3, -3, 4, -3, 5, -4, 6, -4, 8, -3, 9, -2, 10, 2, 10, 3, 9, 4, 8, 4, 6, 3, 5, 3, 4, 2, 3, 2, 2, 1, 1)
+
+[node name="Timeout" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timeout" to="." method="_on_timeout_timeout"]

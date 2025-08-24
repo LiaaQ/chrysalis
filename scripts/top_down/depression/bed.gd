@@ -1,0 +1,15 @@
+extends Interactable
+
+func _ready() -> void:
+	super()
+	
+func interact():
+	super()
+	
+func _process(delta: float) -> void:
+	if $CharacterInBed.visible:
+		if Input.is_action_just_pressed("interact"):
+			$CharacterInBed.visible = false
+			Game_Manager.player.visible = true
+			Game_Manager.movement_locked = false
+			Dialogic.start("out_of_bed")

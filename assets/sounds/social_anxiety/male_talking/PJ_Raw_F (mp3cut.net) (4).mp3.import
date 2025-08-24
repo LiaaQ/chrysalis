@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://db6ef7wmlvksc"
+path="res://.godot/imported/PJ_Raw_F (mp3cut.net) (4).mp3-7bc9afdc9162539c929d23f3a49a2000.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/social_anxiety/male_talking/PJ_Raw_F (mp3cut.net) (4).mp3"
+dest_files=["res://.godot/imported/PJ_Raw_F (mp3cut.net) (4).mp3-7bc9afdc9162539c929d23f3a49a2000.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

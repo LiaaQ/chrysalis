@@ -1,0 +1,259 @@
+[gd_scene load_steps=72 format=3 uid="uid://bnxtwt87yiqrf"]
+
+[ext_resource type="Texture2D" uid="uid://cfijqiwt1g517" path="res://assets/platformer/social_anxiety/crowd/crowd_1.png" id="1_5gjta"]
+[ext_resource type="Script" uid="uid://b2ir8qsfdpmpr" path="res://scripts/platformer/social/platformer_social.gd" id="1_tmix5"]
+[ext_resource type="Texture2D" uid="uid://baux88rgt4mnp" path="res://assets/platformer/social_anxiety/crowd/crowd_2.png" id="2_nef64"]
+[ext_resource type="PackedScene" uid="uid://da6jym0e28uve" path="res://scenes/Platformer/Social/player_platformer_social.tscn" id="2_p1n8j"]
+[ext_resource type="PackedScene" uid="uid://cjyaqj1k2ct57" path="res://scenes/Platformer/Social/eye_spawner.tscn" id="2_vts82"]
+[ext_resource type="Texture2D" uid="uid://d0d1tr7eu47i4" path="res://assets/platformer/health_bar/healthbar_background.png" id="3_r3yaw"]
+[ext_resource type="Texture2D" uid="uid://cg0ymfwpp800m" path="res://assets/platformer/social_anxiety/crowd/crowd_3.png" id="3_tmix5"]
+[ext_resource type="Texture2D" uid="uid://c8e3r55y2hlj" path="res://assets/platformer/social_anxiety/crowd/crowd_4.png" id="4_5h24m"]
+[ext_resource type="Texture2D" uid="uid://dl8mlifdeo0g" path="res://assets/platformer/health_bar/healthbar_progress.png" id="4_yxlew"]
+[ext_resource type="Texture2D" uid="uid://8lhpjnd71wgh" path="res://assets/platformer/social_anxiety/crowd/crowd_5.png" id="5_shl35"]
+[ext_resource type="Script" uid="uid://1chb52ivr1wf" path="res://scripts/platformer/health_bars/hp_player.gd" id="5_vts82"]
+[ext_resource type="Texture2D" uid="uid://m6bu36ev7cxe" path="res://assets/platformer/social_anxiety/crowd/crowd_6.png" id="6_5j3ms"]
+[ext_resource type="Texture2D" uid="uid://bcpsiw8wpcrot" path="res://assets/platformer/depression/Knight_player/portrait.png" id="6_btj4v"]
+[ext_resource type="Texture2D" uid="uid://d3jwksxn0sjj2" path="res://assets/platformer/social_anxiety/crowd/crowd_7.png" id="7_p1n8j"]
+[ext_resource type="Texture2D" uid="uid://ch4hrbi4yqp8l" path="res://assets/platformer/social_anxiety/crowd/crowd_8.png" id="8_r3yaw"]
+[ext_resource type="Texture2D" uid="uid://qee3mrlpcrpj" path="res://assets/platformer/social_anxiety/crowd/crowd_9.png" id="9_yxlew"]
+[ext_resource type="PackedScene" uid="uid://cjsj6rdxgpkwn" path="res://scenes/Platformer/Social/floating_eye_sad.tscn" id="12_5h24m"]
+[ext_resource type="PackedScene" uid="uid://b8xfcvvkt6q78" path="res://scenes/Platformer/Social/floating_eye_turret.tscn" id="17_r3yaw"]
+[ext_resource type="PackedScene" uid="uid://bgjv81abies8j" path="res://scenes/Platformer/Social/floating_eye_angry.tscn" id="18_yxlew"]
+[ext_resource type="Texture2D" uid="uid://d124n3pcv6g24" path="res://assets/platformer/social_anxiety/end_light.png" id="21_7k1ev"]
+[ext_resource type="AudioStream" uid="uid://c2nqe8mktnr4r" path="res://assets/sounds/social_anxiety/ES_Stadium Crowd, Stadium Crowd Walla - Epidemic Sound.mp3" id="21_beona"]
+[ext_resource type="AudioStream" uid="uid://c4y8oxw0kbf7t" path="res://assets/sounds/Music/shimmering-energetic-synthwave-instrumental-for-running-323685.mp3" id="22_beona"]
+[ext_resource type="AudioStream" uid="uid://c8sswmp4s6yj2" path="res://assets/sounds/social_anxiety/female_whispers/ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net).mp3" id="23_v3ux8"]
+[ext_resource type="AudioStream" uid="uid://c1b56cojgotxs" path="res://assets/sounds/social_anxiety/female_whispers/ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (1).mp3" id="24_imrjy"]
+[ext_resource type="AudioStream" uid="uid://b1xffo38isnw3" path="res://assets/sounds/social_anxiety/female_whispers/ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (10).mp3" id="25_pw58q"]
+[ext_resource type="AudioStream" uid="uid://cycw1fma62gyc" path="res://assets/sounds/social_anxiety/female_whispers/ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (11).mp3" id="26_blu48"]
+[ext_resource type="AudioStream" uid="uid://bl0fvvdov24ys" path="res://assets/sounds/social_anxiety/female_whispers/ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (12).mp3" id="27_6g3co"]
+[ext_resource type="AudioStream" uid="uid://cyftw8ymdio1v" path="res://assets/sounds/social_anxiety/female_whispers/ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (13).mp3" id="28_80oi1"]
+[ext_resource type="AudioStream" uid="uid://bw3sekiggi4wh" path="res://assets/sounds/social_anxiety/female_whispers/ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (14).mp3" id="29_bjinp"]
+[ext_resource type="AudioStream" uid="uid://gyqkks6fjvbg" path="res://assets/sounds/social_anxiety/female_whispers/ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (2).mp3" id="30_2vbfr"]
+[ext_resource type="AudioStream" uid="uid://cb03pk3jb2tpu" path="res://assets/sounds/social_anxiety/female_whispers/ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (3).mp3" id="31_yux20"]
+[ext_resource type="AudioStream" uid="uid://dh11u4tqj0bge" path="res://assets/sounds/social_anxiety/female_whispers/ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (4).mp3" id="32_n6iwq"]
+[ext_resource type="AudioStream" uid="uid://byyt7v2txmd3y" path="res://assets/sounds/social_anxiety/female_whispers/ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (5).mp3" id="33_teyk1"]
+[ext_resource type="AudioStream" uid="uid://c150nnugc347c" path="res://assets/sounds/social_anxiety/female_whispers/ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (6).mp3" id="34_sg8tu"]
+[ext_resource type="AudioStream" uid="uid://dk01rx6yo3ddf" path="res://assets/sounds/social_anxiety/female_whispers/ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (7).mp3" id="35_d3ty0"]
+[ext_resource type="AudioStream" uid="uid://b4cg7g5602uat" path="res://assets/sounds/social_anxiety/female_whispers/ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (8).mp3" id="36_4f754"]
+[ext_resource type="AudioStream" uid="uid://s5xxs3m0mjns" path="res://assets/sounds/social_anxiety/female_whispers/ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (9).mp3" id="37_oi57x"]
+[ext_resource type="AudioStream" uid="uid://cgsvf7lxlqjqq" path="res://assets/sounds/social_anxiety/male_talking/PJ_Raw_F (mp3cut.net).mp3" id="38_1aj1e"]
+[ext_resource type="AudioStream" uid="uid://cq71qb52enn1j" path="res://assets/sounds/social_anxiety/male_talking/PJ_Raw_F (mp3cut.net) (1).mp3" id="39_2f1y5"]
+[ext_resource type="AudioStream" uid="uid://cpcng02nn1g5m" path="res://assets/sounds/social_anxiety/male_talking/PJ_Raw_F (mp3cut.net) (10).mp3" id="40_t0cdb"]
+[ext_resource type="AudioStream" uid="uid://cnpmhu1e8nfrq" path="res://assets/sounds/social_anxiety/male_talking/PJ_Raw_F (mp3cut.net) (11).mp3" id="41_8lmv8"]
+[ext_resource type="AudioStream" uid="uid://xlf3w38w02f5" path="res://assets/sounds/social_anxiety/male_talking/PJ_Raw_F (mp3cut.net) (12).mp3" id="42_2ks17"]
+[ext_resource type="AudioStream" uid="uid://wkw0cvfwe6ph" path="res://assets/sounds/social_anxiety/male_talking/PJ_Raw_F (mp3cut.net) (13).mp3" id="43_f5vf3"]
+[ext_resource type="AudioStream" uid="uid://dhjtkaa381377" path="res://assets/sounds/social_anxiety/male_talking/PJ_Raw_F (mp3cut.net) (14).mp3" id="44_miuxt"]
+[ext_resource type="AudioStream" uid="uid://mlqqtbr84i8t" path="res://assets/sounds/social_anxiety/male_talking/PJ_Raw_F (mp3cut.net) (15).mp3" id="45_4pp38"]
+[ext_resource type="AudioStream" uid="uid://bbbbt2t5s8141" path="res://assets/sounds/social_anxiety/male_talking/PJ_Raw_F (mp3cut.net) (2).mp3" id="46_286xu"]
+[ext_resource type="AudioStream" uid="uid://du8xa8v1k3yql" path="res://assets/sounds/social_anxiety/male_talking/PJ_Raw_F (mp3cut.net) (3).mp3" id="47_ke6ln"]
+[ext_resource type="AudioStream" uid="uid://db6ef7wmlvksc" path="res://assets/sounds/social_anxiety/male_talking/PJ_Raw_F (mp3cut.net) (4).mp3" id="48_4eddg"]
+[ext_resource type="AudioStream" uid="uid://blq8j7g1x48qf" path="res://assets/sounds/social_anxiety/male_talking/PJ_Raw_F (mp3cut.net) (5).mp3" id="49_scpre"]
+[ext_resource type="AudioStream" uid="uid://bqjd7ehtx8up5" path="res://assets/sounds/social_anxiety/male_talking/PJ_Raw_F (mp3cut.net) (6).mp3" id="50_i0oy7"]
+[ext_resource type="AudioStream" uid="uid://di0pik34gbk1y" path="res://assets/sounds/social_anxiety/male_talking/PJ_Raw_F (mp3cut.net) (7).mp3" id="51_sspvt"]
+[ext_resource type="AudioStream" uid="uid://v4pna26ox08y" path="res://assets/sounds/social_anxiety/male_talking/PJ_Raw_F (mp3cut.net) (8).mp3" id="52_8diyd"]
+[ext_resource type="AudioStream" uid="uid://cl1aql4ao8jye" path="res://assets/sounds/social_anxiety/male_talking/PJ_Raw_F (mp3cut.net) (9).mp3" id="53_f08lh"]
+[ext_resource type="AudioStream" uid="uid://diey0qu7fi1e7" path="res://assets/sounds/social_anxiety/male_whispers/PJ_Raw_F (mp3cut.net) (1).mp3" id="54_fbklw"]
+[ext_resource type="AudioStream" uid="uid://dyoaygahuan8r" path="res://assets/sounds/social_anxiety/male_whispers/PJ_Raw_F (mp3cut.net) (10).mp3" id="55_pc0hp"]
+[ext_resource type="AudioStream" uid="uid://cdnimanwrs5cg" path="res://assets/sounds/social_anxiety/male_whispers/PJ_Raw_F (mp3cut.net) (11).mp3" id="56_7bpm5"]
+[ext_resource type="AudioStream" uid="uid://b0vd7pgjipi84" path="res://assets/sounds/social_anxiety/male_whispers/PJ_Raw_F (mp3cut.net) (12).mp3" id="57_53ahh"]
+[ext_resource type="AudioStream" uid="uid://cdnbay3fw48nx" path="res://assets/sounds/social_anxiety/male_whispers/PJ_Raw_F (mp3cut.net) (13).mp3" id="58_3sean"]
+[ext_resource type="AudioStream" uid="uid://dfioduqf6ld80" path="res://assets/sounds/social_anxiety/male_whispers/PJ_Raw_F (mp3cut.net) (14).mp3" id="59_olxmm"]
+[ext_resource type="AudioStream" uid="uid://crmhthujskchg" path="res://assets/sounds/social_anxiety/male_whispers/PJ_Raw_F (mp3cut.net) (15).mp3" id="60_gkf5x"]
+[ext_resource type="AudioStream" uid="uid://b14arochxeg7m" path="res://assets/sounds/social_anxiety/male_whispers/PJ_Raw_F (mp3cut.net) (2).mp3" id="61_5r408"]
+[ext_resource type="AudioStream" uid="uid://b15rc33fpmq8a" path="res://assets/sounds/social_anxiety/male_whispers/PJ_Raw_F (mp3cut.net) (3).mp3" id="62_xg262"]
+[ext_resource type="AudioStream" uid="uid://ch4u0byxy4fci" path="res://assets/sounds/social_anxiety/male_whispers/PJ_Raw_F (mp3cut.net) (4).mp3" id="63_8y2s4"]
+[ext_resource type="AudioStream" uid="uid://dvv3n6g0108x3" path="res://assets/sounds/social_anxiety/male_whispers/PJ_Raw_F (mp3cut.net) (5).mp3" id="64_yfui6"]
+[ext_resource type="AudioStream" uid="uid://c4i4w2uybcjfh" path="res://assets/sounds/social_anxiety/male_whispers/PJ_Raw_F (mp3cut.net) (6).mp3" id="65_mymbn"]
+[ext_resource type="AudioStream" uid="uid://141su7jrokgt" path="res://assets/sounds/social_anxiety/male_whispers/PJ_Raw_F (mp3cut.net) (7).mp3" id="66_2g62b"]
+[ext_resource type="AudioStream" uid="uid://dh2wteytyx0io" path="res://assets/sounds/social_anxiety/male_whispers/PJ_Raw_F (mp3cut.net) (8).mp3" id="67_1qkbv"]
+[ext_resource type="AudioStream" uid="uid://cbiestekda060" path="res://assets/sounds/social_anxiety/male_whispers/PJ_Raw_F (mp3cut.net) (9).mp3" id="68_nlwut"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vts82"]
+size = Vector2(57, 509)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7k1ev"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7k1ev"]
+size = Vector2(132, 1135)
+
+[node name="platformer_social" type="Node2D" node_paths=PackedStringArray("player")]
+script = ExtResource("1_tmix5")
+player = NodePath("player_platformer2")
+
+[node name="EyeSpawner" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_vts82")]
+eye_scenes = Array[PackedScene]([ExtResource("18_yxlew"), ExtResource("12_5h24m"), ExtResource("17_r3yaw")])
+player = NodePath("../player_platformer2")
+
+[node name="Background" type="Node" parent="."]
+
+[node name="Back" type="ParallaxBackground" parent="Background"]
+offset = Vector2(0, 105)
+transform = Transform2D(1, 0, 0, 1, 0, 105)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background/Back"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer"]
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+texture = ExtResource("1_5gjta")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Background/Back"]
+motion_scale = Vector2(0.2, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer2"]
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+texture = ExtResource("2_nef64")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Background/Back"]
+motion_scale = Vector2(0.3, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer3"]
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+texture = ExtResource("3_tmix5")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Background/Back"]
+motion_scale = Vector2(0.4, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer4"]
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+texture = ExtResource("4_5h24m")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Background/Back"]
+motion_scale = Vector2(0.5, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer5"]
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+texture = ExtResource("5_shl35")
+centered = false
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="Background/Back"]
+motion_scale = Vector2(0.6, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer6"]
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+texture = ExtResource("6_5j3ms")
+centered = false
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="Background/Back"]
+motion_scale = Vector2(0.7, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer7"]
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+texture = ExtResource("7_p1n8j")
+centered = false
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="Background/Back"]
+motion_scale = Vector2(0.8, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer8"]
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+texture = ExtResource("8_r3yaw")
+centered = false
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="Background/Back"]
+motion_scale = Vector2(0.9, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer9"]
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+texture = ExtResource("9_yxlew")
+centered = false
+
+[node name="player_platformer2" parent="." instance=ExtResource("2_p1n8j")]
+position = Vector2(35, 337)
+
+[node name="Camera2D" type="Camera2D" parent="player_platformer2"]
+zoom = Vector2(1.5, 1.5)
+
+[node name="PlayerHP" type="TextureProgressBar" parent="player_platformer2/Camera2D" node_paths=PackedStringArray("player")]
+z_index = 2
+offset_left = -345.0
+offset_top = 174.0
+offset_right = -281.0
+offset_bottom = 214.0
+scale = Vector2(3.71205, 3.01972)
+texture_under = ExtResource("3_r3yaw")
+texture_progress = ExtResource("4_yxlew")
+script = ExtResource("5_vts82")
+player = NodePath("../..")
+
+[node name="PlayerPortrait" type="Sprite2D" parent="player_platformer2/Camera2D"]
+z_index = 3
+position = Vector2(-351, 180)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("6_btj4v")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(48, 403)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-266.5, -233.5)
+shape = SubResource("RectangleShape2D_vts82")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(4206, 13)
+shape = SubResource("WorldBoundaryShape2D_7k1ev")
+
+[node name="EndLight" type="Sprite2D" parent="."]
+position = Vector2(12867, 329)
+scale = Vector2(4, 8.49)
+texture = ExtResource("21_7k1ev")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("21_beona")
+volume_db = -6.0
+autoplay = true
+parameters/looping = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(13111, 349)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_7k1ev")
+
+[node name="new_level" type="Area2D" parent="."]
+position = Vector2(13505, 346)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="new_level"]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_7k1ev")
+
+[node name="Song" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_beona")
+volume_db = -8.0
+autoplay = true
+
+[node name="Female_Whispers" type="ResourcePreloader" parent="."]
+resources = [PackedStringArray("ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net)", "ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (1)", "ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (10)", "ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (11)", "ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (12)", "ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (13)", "ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (14)", "ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (2)", "ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (3)", "ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (4)", "ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (5)", "ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (6)", "ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (7)", "ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (8)", "ElevenLabs_2025-05-08T17_41_27_Nicole_pre_sp100_s50_sb75_se0_b_m2 (mp3cut.net) (9)"), [ExtResource("23_v3ux8"), ExtResource("24_imrjy"), ExtResource("25_pw58q"), ExtResource("26_blu48"), ExtResource("27_6g3co"), ExtResource("28_80oi1"), ExtResource("29_bjinp"), ExtResource("30_2vbfr"), ExtResource("31_yux20"), ExtResource("32_n6iwq"), ExtResource("33_teyk1"), ExtResource("34_sg8tu"), ExtResource("35_d3ty0"), ExtResource("36_4f754"), ExtResource("37_oi57x")]]
+
+[node name="Male_Talking" type="ResourcePreloader" parent="."]
+resources = [PackedStringArray("PJ_Raw_F (mp3cut.net)", "PJ_Raw_F (mp3cut.net) (1)", "PJ_Raw_F (mp3cut.net) (10)", "PJ_Raw_F (mp3cut.net) (11)", "PJ_Raw_F (mp3cut.net) (12)", "PJ_Raw_F (mp3cut.net) (13)", "PJ_Raw_F (mp3cut.net) (14)", "PJ_Raw_F (mp3cut.net) (15)", "PJ_Raw_F (mp3cut.net) (2)", "PJ_Raw_F (mp3cut.net) (3)", "PJ_Raw_F (mp3cut.net) (4)", "PJ_Raw_F (mp3cut.net) (5)", "PJ_Raw_F (mp3cut.net) (6)", "PJ_Raw_F (mp3cut.net) (7)", "PJ_Raw_F (mp3cut.net) (8)", "PJ_Raw_F (mp3cut.net) (9)"), [ExtResource("38_1aj1e"), ExtResource("39_2f1y5"), ExtResource("40_t0cdb"), ExtResource("41_8lmv8"), ExtResource("42_2ks17"), ExtResource("43_f5vf3"), ExtResource("44_miuxt"), ExtResource("45_4pp38"), ExtResource("46_286xu"), ExtResource("47_ke6ln"), ExtResource("48_4eddg"), ExtResource("49_scpre"), ExtResource("50_i0oy7"), ExtResource("51_sspvt"), ExtResource("52_8diyd"), ExtResource("53_f08lh")]]
+
+[node name="Male_Whispers" type="ResourcePreloader" parent="."]
+resources = [PackedStringArray("PJ_Raw_F (mp3cut.net) (1)", "PJ_Raw_F (mp3cut.net) (10)", "PJ_Raw_F (mp3cut.net) (11)", "PJ_Raw_F (mp3cut.net) (12)", "PJ_Raw_F (mp3cut.net) (13)", "PJ_Raw_F (mp3cut.net) (14)", "PJ_Raw_F (mp3cut.net) (15)", "PJ_Raw_F (mp3cut.net) (2)", "PJ_Raw_F (mp3cut.net) (3)", "PJ_Raw_F (mp3cut.net) (4)", "PJ_Raw_F (mp3cut.net) (5)", "PJ_Raw_F (mp3cut.net) (6)", "PJ_Raw_F (mp3cut.net) (7)", "PJ_Raw_F (mp3cut.net) (8)", "PJ_Raw_F (mp3cut.net) (9)"), [ExtResource("54_fbklw"), ExtResource("55_pc0hp"), ExtResource("56_7bpm5"), ExtResource("57_53ahh"), ExtResource("58_3sean"), ExtResource("59_olxmm"), ExtResource("60_gkf5x"), ExtResource("61_5r408"), ExtResource("62_xg262"), ExtResource("63_8y2s4"), ExtResource("64_yfui6"), ExtResource("65_mymbn"), ExtResource("66_2g62b"), ExtResource("67_1qkbv"), ExtResource("68_nlwut")]]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="new_level" to="." method="_on_new_level_body_entered"]

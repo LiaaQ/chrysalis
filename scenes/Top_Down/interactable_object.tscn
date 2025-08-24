@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://f7oi14j37173"]
+
+[ext_resource type="Script" uid="uid://dvlakmoi5kbud" path="res://scripts/top_down/interactable_object.gd" id="1_gknyc"]
+
+[node name="Interactable Object" type="StaticBody2D"]
+collision_layer = 65
+script = ExtResource("1_gknyc")

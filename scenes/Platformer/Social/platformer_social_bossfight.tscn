@@ -1,0 +1,307 @@
+[gd_scene load_steps=35 format=4 uid="uid://cygtihqp6r16j"]
+
+[ext_resource type="Texture2D" uid="uid://cfijqiwt1g517" path="res://assets/platformer/social_anxiety/crowd/crowd_1.png" id="1_a5xw7"]
+[ext_resource type="Script" uid="uid://c5gubtw38sxp4" path="res://scripts/platformer/social/platformer_social_bossfight.gd" id="1_oncve"]
+[ext_resource type="Texture2D" uid="uid://baux88rgt4mnp" path="res://assets/platformer/social_anxiety/crowd/crowd_2.png" id="2_4ma60"]
+[ext_resource type="Texture2D" uid="uid://cg0ymfwpp800m" path="res://assets/platformer/social_anxiety/crowd/crowd_3.png" id="3_5vvoh"]
+[ext_resource type="Texture2D" uid="uid://c8e3r55y2hlj" path="res://assets/platformer/social_anxiety/crowd/crowd_4.png" id="4_4x3ud"]
+[ext_resource type="Texture2D" uid="uid://8lhpjnd71wgh" path="res://assets/platformer/social_anxiety/crowd/crowd_5.png" id="5_5qrep"]
+[ext_resource type="Texture2D" uid="uid://m6bu36ev7cxe" path="res://assets/platformer/social_anxiety/crowd/crowd_6.png" id="6_tkrqp"]
+[ext_resource type="Texture2D" uid="uid://d3jwksxn0sjj2" path="res://assets/platformer/social_anxiety/crowd/crowd_7.png" id="7_8xnps"]
+[ext_resource type="Texture2D" uid="uid://ch4hrbi4yqp8l" path="res://assets/platformer/social_anxiety/crowd/crowd_8.png" id="8_48dl0"]
+[ext_resource type="Texture2D" uid="uid://qee3mrlpcrpj" path="res://assets/platformer/social_anxiety/crowd/crowd_9.png" id="9_h7pkq"]
+[ext_resource type="Texture2D" uid="uid://2a82oi46th28" path="res://assets/platformer/social_anxiety/tileset.png" id="10_4x3ud"]
+[ext_resource type="PackedScene" uid="uid://da6jym0e28uve" path="res://scenes/Platformer/Social/player_platformer_social.tscn" id="11_5qrep"]
+[ext_resource type="PackedScene" uid="uid://bp8hftlr0o3j5" path="res://scenes/Platformer/Social/eye_boss.tscn" id="12_tkrqp"]
+[ext_resource type="Texture2D" uid="uid://d0d1tr7eu47i4" path="res://assets/platformer/health_bar/healthbar_background.png" id="14_cpcgu"]
+[ext_resource type="Texture2D" uid="uid://dl8mlifdeo0g" path="res://assets/platformer/health_bar/healthbar_progress.png" id="15_wsly2"]
+[ext_resource type="Script" uid="uid://1chb52ivr1wf" path="res://scripts/platformer/health_bars/hp_player.gd" id="16_a7ky8"]
+[ext_resource type="Texture2D" uid="uid://bcpsiw8wpcrot" path="res://assets/platformer/depression/Knight_player/portrait.png" id="17_gypk3"]
+[ext_resource type="Script" uid="uid://gjeqw2f47lqc" path="res://scripts/platformer/health_bars/hp_area.gd" id="18_cpcgu"]
+[ext_resource type="Texture2D" uid="uid://com5mdsdrlxot" path="res://assets/platformer/social_anxiety/floating_eye/eyecover.png" id="18_ptj6r"]
+[ext_resource type="Texture2D" uid="uid://dn3eqpvf88q8p" path="res://assets/platformer/social_anxiety/floating_eye/eyemask.png" id="19_khnao"]
+[ext_resource type="Texture2D" uid="uid://ic73v8y772ou" path="res://assets/platformer/social_anxiety/floating_eye/sad_eye.png" id="20_86wyx"]
+[ext_resource type="AudioStream" uid="uid://75vnivn1apra" path="res://assets/sounds/social_anxiety/ES_Walla, Festive Shouting, Party, Continuous Laughter, Bar Mitzvah - Epidemic Sound.mp3" id="22_ptj6r"]
+[ext_resource type="Script" uid="uid://dvlakmoi5kbud" path="res://scripts/top_down/interactable_object.gd" id="23_gypk3"]
+[ext_resource type="Texture2D" uid="uid://biats3dxur1r2" path="res://assets/platformer/social_anxiety/Idle_Bgirl.png" id="24_ptj6r"]
+[ext_resource type="AudioStream" uid="uid://britoum5xvebh" path="res://assets/sounds/Music/443128__sirkoto51__boss-battle-loop-3.mp3" id="25_khnao"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5qrep"]
+texture = ExtResource("10_4x3ud")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4x3ud"]
+texture = ExtResource("10_4x3ud")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_48dl0"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_5qrep")
+sources/3 = SubResource("TileSetAtlasSource_4x3ud")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khnao"]
+atlas = ExtResource("24_ptj6r")
+region = Rect2(0, 0, 72, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86wyx"]
+atlas = ExtResource("24_ptj6r")
+region = Rect2(72, 0, 72, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbayp"]
+atlas = ExtResource("24_ptj6r")
+region = Rect2(144, 0, 72, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07o8l"]
+atlas = ExtResource("24_ptj6r")
+region = Rect2(216, 0, 72, 90)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3hp0c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khnao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86wyx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbayp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07o8l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jduhv"]
+size = Vector2(285, 185)
+
+[node name="platformer_social_bossfight" type="Node2D"]
+script = ExtResource("1_oncve")
+
+[node name="Background" type="Node" parent="."]
+
+[node name="Back" type="ParallaxBackground" parent="Background"]
+offset = Vector2(0, 105)
+transform = Transform2D(1, 0, 0, 1, 0, 105)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background/Back"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer"]
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+texture = ExtResource("1_a5xw7")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Background/Back"]
+motion_scale = Vector2(0.2, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer2"]
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+texture = ExtResource("2_4ma60")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Background/Back"]
+motion_scale = Vector2(0.3, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer3"]
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+texture = ExtResource("3_5vvoh")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Background/Back"]
+motion_scale = Vector2(0.4, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer4"]
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+texture = ExtResource("4_4x3ud")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Background/Back"]
+motion_scale = Vector2(0.5, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer5"]
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+texture = ExtResource("5_5qrep")
+centered = false
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="Background/Back"]
+motion_scale = Vector2(0.6, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer6"]
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+texture = ExtResource("6_tkrqp")
+centered = false
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="Background/Back"]
+motion_scale = Vector2(0.7, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer7"]
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+texture = ExtResource("7_8xnps")
+centered = false
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="Background/Back"]
+motion_scale = Vector2(0.8, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer8"]
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+texture = ExtResource("8_48dl0")
+centered = false
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="Background/Back"]
+motion_scale = Vector2(0.9, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer9"]
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+texture = ExtResource("9_h7pkq")
+centered = false
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAAAAkAAgAAAAAAAAABAAkAAgABAAAAAAACAAkAAgABAAAAAAADAAkAAgABAAAAAAAEAAkAAgABAAAAAAAFAAkAAgABAAAAAAAGAAkAAgABAAAAAAAHAAkAAgABAAAAAAAIAAkAAgABAAAAAAAJAAkAAgABAAAAAAAKAAkAAgABAAAAAAALAAkAAgABAAAAAAAMAAkAAgABAAAAAAANAAkAAgABAAAAAAAOAAkAAgABAAAAAAAPAAkAAgABAAAAAAAQAAkAAgACAAAAAAABAAYAAgAAAAAAAAACAAYAAgABAAAAAAADAAYAAgABAAAAAAAEAAYAAgACAAAAAAAMAAYAAgAAAAAAAAANAAYAAgABAAAAAAAOAAYAAgABAAAAAAAPAAYAAgACAAAAAAAEAAMAAgAAAAAAAAAFAAMAAgABAAAAAAAGAAMAAgACAAAAAAALAAMAAgABAAAAAAAMAAMAAgACAAAAAAAKAAMAAgAAAAAAAAA=")
+tile_set = SubResource("TileSet_48dl0")
+
+[node name="player_platformer" parent="." instance=ExtResource("11_5qrep")]
+z_index = 3
+position = Vector2(135, 344)
+collision_layer = 65
+collision_mask = 65
+damage = 15
+
+[node name="Eye_Boss" parent="." node_paths=PackedStringArray("player", "camera") instance=ExtResource("12_tkrqp")]
+position = Vector2(547, 382)
+scale = Vector2(6, 6)
+player = NodePath("../player_platformer")
+max_offset = Vector2(5, 2)
+camera = NodePath("../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(552, 314)
+zoom = Vector2(1.1, 1.1)
+
+[node name="PlayerHP" type="TextureProgressBar" parent="Camera2D" node_paths=PackedStringArray("player")]
+z_index = 4
+offset_left = -506.0
+offset_top = 245.0
+offset_right = -442.0
+offset_bottom = 285.0
+scale = Vector2(5.627, 4.578)
+texture_under = ExtResource("14_cpcgu")
+texture_progress = ExtResource("15_wsly2")
+script = ExtResource("16_a7ky8")
+player = NodePath("../../player_platformer")
+
+[node name="PlayerPortrait" type="Sprite2D" parent="Camera2D"]
+z_index = 4
+position = Vector2(-491, 264)
+scale = Vector2(1.525, 1.525)
+texture = ExtResource("17_gypk3")
+
+[node name="EyebossHP" type="TextureProgressBar" parent="Camera2D" node_paths=PackedStringArray("area")]
+z_index = 4
+offset_left = -29.0
+offset_top = -285.0
+offset_right = 35.0
+offset_bottom = -245.0
+scale = Vector2(8.512, 5.108)
+texture_under = ExtResource("14_cpcgu")
+texture_progress = ExtResource("15_wsly2")
+script = ExtResource("18_cpcgu")
+area = NodePath("../../Eye_Boss")
+
+[node name="Node2D" type="Node2D" parent="Camera2D"]
+z_index = 4
+position = Vector2(-10, -261)
+scale = Vector2(1.575, 1.575)
+
+[node name="Eyecover" type="Sprite2D" parent="Camera2D/Node2D"]
+z_index = 5
+texture = ExtResource("18_ptj6r")
+hframes = 14
+
+[node name="UndeadPortrait" type="Sprite2D" parent="Camera2D/Node2D"]
+z_index = 3
+texture = ExtResource("19_khnao")
+
+[node name="Eyeball" type="Sprite2D" parent="Camera2D/Node2D"]
+z_index = 3
+texture = ExtResource("20_86wyx")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(30, -61, 28, 602, 1073, 605, 1075, -61)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+light_mask = 0
+z_index = 10
+offset_left = 1.0
+offset_top = 637.0
+offset_right = 1098.0
+offset_bottom = 2529.0
+color = Color(0, 0.557222, 0.557222, 1)
+
+[node name="Crowd" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_ptj6r")
+volume_db = 12.0
+autoplay = true
+
+[node name="Interactable" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2(563, 532)
+collision_layer = 65
+script = ExtResource("23_gypk3")
+dialogic_timeline = "social_platformer_finish"
+instant_trigger = true
+metadata/_custom_type_script = "uid://dvlakmoi5kbud"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Interactable"]
+sprite_frames = SubResource("SpriteFrames_3hp0c")
+autoplay = "default"
+frame_progress = 0.800977
+
+[node name="Area2D" type="Area2D" parent="Interactable"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable/Area2D"]
+position = Vector2(7.5, -14.5)
+shape = SubResource("RectangleShape2D_jduhv")
+disabled = true
+
+[node name="Song" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("25_khnao")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="body_entered" from="Interactable/Area2D" to="." method="_on_area_2d_body_entered"]

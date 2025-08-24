@@ -1,0 +1,377 @@
+[gd_scene load_steps=25 format=4 uid="uid://b3bn2e2cy8f72"]
+
+[ext_resource type="Script" uid="uid://ds1k6a7tg3ye3" path="res://scripts/platformer/ocd/platformer_ocd_bossfight.gd" id="1_o4xtw"]
+[ext_resource type="Texture2D" uid="uid://d0d1tr7eu47i4" path="res://assets/platformer/health_bar/healthbar_background.png" id="2_6w8l3"]
+[ext_resource type="Texture2D" uid="uid://cf8afnqgkxvcn" path="res://assets/platformer/ocd/background_back.png" id="2_wkrfw"]
+[ext_resource type="Texture2D" uid="uid://chs3dvbbuk3de" path="res://assets/platformer/ocd/background_front.png" id="3_7wght"]
+[ext_resource type="Texture2D" uid="uid://bl44811vt2vo0" path="res://assets/platformer/health_bar/healthbar_progress_anxiety.png" id="3_ookf5"]
+[ext_resource type="Texture2D" uid="uid://cypcsxcmcyg83" path="res://assets/platformer/ocd/factory_.png" id="4_5v1kg"]
+[ext_resource type="Script" uid="uid://b20jqycn4qd71" path="res://scripts/platformer/health_bars/ocd_anxiety_bar.gd" id="4_6n8iu"]
+[ext_resource type="PackedScene" uid="uid://c3ldawxivlcuo" path="res://scenes/Platformer/OCD/unaligned_block.tscn" id="8_13tq2"]
+[ext_resource type="PackedScene" uid="uid://cwn1c816mlef8" path="res://scenes/Platformer/player_platformer_pacifist.tscn" id="8_aah0n"]
+[ext_resource type="Texture2D" uid="uid://p2pbi1dato50" path="res://assets/platformer/ocd/2.png" id="9_y1ta0"]
+[ext_resource type="Texture2D" uid="uid://cq3iw6ft7re2q" path="res://assets/platformer/ocd/1.png" id="10_s5jqn"]
+[ext_resource type="Texture2D" uid="uid://bfpqtnxmbw86h" path="res://assets/platformer/ocd/boss.png" id="12_13tq2"]
+[ext_resource type="Texture2D" uid="uid://dl8mlifdeo0g" path="res://assets/platformer/health_bar/healthbar_progress.png" id="13_vh88f"]
+[ext_resource type="Script" uid="uid://dnjluh3k8cwoo" path="res://scripts/platformer/health_bars/ocd_hp.gd" id="14_vh88f"]
+[ext_resource type="Texture2D" uid="uid://bcpsiw8wpcrot" path="res://assets/platformer/depression/Knight_player/portrait.png" id="15_tqwn7"]
+[ext_resource type="AudioStream" uid="uid://cs64ie7kwt43" path="res://assets/sounds/Music/ES_Stupid Computer Error - Stationary Sign.mp3" id="16_0x75u"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6w8l3"]
+texture = ExtResource("4_5v1kg")
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, 8, -8, 8, 8, -0.152822, 8)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0, -8, 0, 8, -8, 8)
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.152822, 8, -0.152822, 8, 8, -8, 8)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 0, 8, 0.152822, 8, 8, -0.152822, 8)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0.152822, 0.152822, -0.152822, 0, 8, -8, 8)
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, 0)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, 8, -8, 8, 0, 0, 0)
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0, -8, 0.152822, 0, -8, -0.152822)
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, 8, -8, 8, 8, -0.152822, 8)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0, -8, 0, 8, -8, 8)
+7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, -0.152822)
+8:4/0 = 0
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, -0.152822)
+9:4/0 = 0
+9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, -0.152822)
+10:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0.152822, 8, 0, 8, 8, -8, 8)
+5:5/0 = 0
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 0, 8, 0.152822, 8, 8, -0.152822, 8)
+6:5/0 = 0
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0.152822, 0.152822, -0.152822, 0, 8, -8, 8)
+7:5/0 = 0
+7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, -0.152822)
+8:5/0 = 0
+8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, -0.152822)
+9:5/0 = 0
+9:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, -0.152822)
+10:5/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, 0)
+5:6/0 = 0
+5:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, 8, -8, 8, 0, 0, 0)
+6:6/0 = 0
+6:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0, -8, 0.152822, 0, -8, -0.152822)
+7:6/0 = 0
+7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, -0.152822)
+8:6/0 = 0
+8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, -0.152822)
+9:6/0 = 0
+9:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, -0.152822)
+10:6/0 = 0
+1:7/0 = 0
+1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.90362, 8, -2.90362, 8, 0, -8, -0.152822)
+2:7/0 = 0
+2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.98669, 8, -1.98669, 8, 1.68104, -8, 1.83387)
+3:7/0 = 0
+3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.06975, 8, -1.06975, 8, 2.90362, -8, 3.05644)
+4:7/0 = 0
+4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.96006, 8, -5.96006, 8, -1.98669, -8, -1.98669)
+5:7/0 = 0
+5:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.04313, 8, -5.04313, 8, -1.98669, -8, -1.98669)
+6:7/0 = 0
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.98669, 8, -1.98669, 8, 1.68104, -8, 1.83387)
+7:7/0 = 0
+7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, -0.152822)
+8:7/0 = 0
+8:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, -0.152822)
+9:7/0 = 0
+9:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, -0.152822)
+10:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ookf5"]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_6w8l3")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aah0n"]
+size = Vector2(37, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1ta0"]
+atlas = ExtResource("12_13tq2")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5jqn"]
+atlas = ExtResource("12_13tq2")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vh88f"]
+atlas = ExtResource("12_13tq2")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0x75u"]
+atlas = ExtResource("12_13tq2")
+region = Rect2(150, 0, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tqwn7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1ta0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5jqn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vh88f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0x75u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="platformer_OCD_bossfight" type="Node2D"]
+script = ExtResource("1_o4xtw")
+
+[node name="OCDAnxietyBar" type="TextureProgressBar" parent="."]
+z_index = 4
+offset_left = 51.0
+offset_top = 2.0
+offset_right = 115.0
+offset_bottom = 42.0
+scale = Vector2(8.325, 5.655)
+texture_under = ExtResource("2_6w8l3")
+texture_progress = ExtResource("3_ookf5")
+script = ExtResource("4_6n8iu")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Back" type="ParallaxBackground" parent="Background"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background/Back"]
+modulate = Color(0.266575, 0.266575, 0.266575, 1)
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1152, 768)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer"]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_wkrfw")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Background/Back"]
+modulate = Color(0.283373, 0.34151, 0.552423, 1)
+motion_scale = Vector2(0.4, 0.1)
+motion_mirroring = Vector2(1152, 768)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back/ParallaxLayer4"]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("3_7wght")
+centered = false
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Node2D"]
+scale = Vector2(3, 3)
+tile_map_data = PackedByteArray("AAAAAA0AAQAEAAQAAAABAA0AAQAEAAQAAAACAA0AAQAEAAQAAAADAA0AAQAEAAEAAAAEAA0AAQAEAAQAAAAFAA0AAQAEAAQAAAAGAA0AAQAEAAQAAAAHAA0AAQAEAAQAAAAIAA0AAQAEAAEAAAAJAA0AAQAEAAQAAAAKAA0AAQAEAAQAAAALAA0AAQAEAAQAAAAMAA0AAQAEAAQAAAANAA0AAQAEAAQAAAAOAA0AAQAEAAQAAAAPAA0AAQAEAAQAAAAQAA0AAQAEAAQAAAARAA0AAQAEAAQAAAASAA0AAQAEAAQAAAATAA0AAQAEAAQAAAAUAA0AAQAEAAQAAAAVAA0AAQAEAAQAAAAWAA0AAQAEAAQAAAAXAA0AAQAEAAQAAAADAAkAAQAEAAQAAAAFAAkAAQAEAAQAAAAOAAoAAQAEAAEAAAAPAAoAAQAEAAEAAAAQAAoAAQAEAAEAAAARAAoAAQAEAAEAAAASAAoAAQAEAAEAAAATAAoAAQAEAAEAAAADAAIAAQAEAAEAAAASAAAAAQAEAAEAAAASAAEAAQAEAAEAAAASAAIAAQAEAAQAAAASAAMAAQAEAAQAAAAUAAMAAQAEAAEAAAATAAMAAQAEAAEAAAAVAAMAAQAEAAEAAAAWAAMAAQAEAAEAAAAXAAMAAQAEAAQAAAANAAoAAQAEAAEAAAAAAAAAAQAEAAQAAAAAAAEAAQAEAAQAAAAAAAIAAQAEAAQAAAAAAAMAAQAEAAQAAAAAAAQAAQAEAAQAAAAAAAUAAQAEAAQAAAAAAAYAAQAEAAEAAAAAAAcAAQAEAAQAAAAAAAgAAQAEAAQAAAAAAAkAAQAEAAEAAAAAAAoAAQAEAAQAAAAAAAsAAQAEAAQAAAAAAAwAAQAEAAQAAAAAAPT/AQAEAAEAAAAAAPX/AQAEAAEAAAAAAPb/AQAEAAEAAAAAAPf/AQAEAAEAAAAAAPj/AQAEAAEAAAAAAPn/AQAEAAEAAAAAAPr/AQAEAAEAAAAAAPv/AQAEAAEAAAAAAPz/AQAEAAEAAAAAAP3/AQAEAAEAAAAAAP7/AQAEAAEAAAAAAP//AQAEAAEAAAAXAPP/AQAEAAEAAAAXAPT/AQAEAAEAAAAXAPX/AQAEAAEAAAAXAPb/AQAEAAEAAAAXAPf/AQAEAAEAAAAXAPj/AQAEAAEAAAAXAPn/AQAEAAEAAAAXAPr/AQAEAAEAAAAXAPv/AQAEAAEAAAAXAPz/AQAEAAEAAAAXAP3/AQAEAAEAAAAXAP7/AQAEAAEAAAAXAP//AQAEAAEAAAAXAAAAAQAEAAQAAAAXAAEAAQAEAAQAAAAXAAIAAQAEAAQAAAAXAAQAAQAEAAQAAAAXAAUAAQAEAAQAAAAXAAYAAQAEAAEAAAAXAAcAAQAEAAQAAAAXAAgAAQAEAAQAAAAXAAkAAQAEAAQAAAAXAAoAAQAEAAQAAAAXAAsAAQAEAAQAAAAXAAwAAQAEAAQAAAASAP//AQAEAAQAAAASAP7/AQAEAAQAAAASAP3/AQAEAAQAAAASAPz/AQAEAAQAAAASAPv/AQAEAAQAAAA=")
+tile_set = SubResource("TileSet_ookf5")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="Node2D"]
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_ookf5")
+
+[node name="TileMapLayer3" type="TileMapLayer" parent="Node2D"]
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_ookf5")
+
+[node name="Unaligned_Blocks" type="Node2D" parent="."]
+
+[node name="unaligned_block" parent="Unaligned_Blocks" instance=ExtResource("8_13tq2")]
+position = Vector2(359, 264)
+offset = 0.0
+texture = ExtResource("9_y1ta0")
+platformer_version = false
+
+[node name="unaligned_block2" parent="Unaligned_Blocks" instance=ExtResource("8_13tq2")]
+position = Vector2(407, 264)
+offset = 0.0
+texture = ExtResource("9_y1ta0")
+platformer_version = false
+
+[node name="unaligned_block3" parent="Unaligned_Blocks" instance=ExtResource("8_13tq2")]
+position = Vector2(455, 264)
+offset = 0.0
+texture = ExtResource("10_s5jqn")
+platformer_version = false
+
+[node name="unaligned_block4" parent="Unaligned_Blocks" instance=ExtResource("8_13tq2")]
+position = Vector2(503, 264)
+offset = 0.0
+texture = ExtResource("9_y1ta0")
+platformer_version = false
+
+[node name="unaligned_block5" parent="Unaligned_Blocks" instance=ExtResource("8_13tq2")]
+position = Vector2(551, 264)
+offset = 0.0
+texture = ExtResource("9_y1ta0")
+platformer_version = false
+
+[node name="unaligned_block6" parent="Unaligned_Blocks" instance=ExtResource("8_13tq2")]
+position = Vector2(599, 264)
+offset = 0.0
+texture = ExtResource("9_y1ta0")
+platformer_version = false
+
+[node name="unaligned_block7" parent="Unaligned_Blocks" instance=ExtResource("8_13tq2")]
+position = Vector2(647, 264)
+offset = 0.0
+texture = ExtResource("10_s5jqn")
+platformer_version = false
+
+[node name="unaligned_block8" parent="Unaligned_Blocks" instance=ExtResource("8_13tq2")]
+position = Vector2(695, 264)
+offset = 0.0
+texture = ExtResource("10_s5jqn")
+platformer_version = false
+
+[node name="unaligned_block9" parent="Unaligned_Blocks" instance=ExtResource("8_13tq2")]
+position = Vector2(743, 264)
+offset = 0.0
+texture = ExtResource("9_y1ta0")
+platformer_version = false
+
+[node name="unaligned_block10" parent="Unaligned_Blocks" instance=ExtResource("8_13tq2")]
+position = Vector2(408, 455)
+offset = 0.0
+texture = ExtResource("10_s5jqn")
+platformer_version = false
+
+[node name="Unaligned_Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="player_platformer_pacifist" parent="." instance=ExtResource("8_aah0n")]
+position = Vector2(675, 437)
+
+[node name="Coin_Areas" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin_Areas"]
+position = Vector2(168, 406)
+shape = SubResource("RectangleShape2D_aah0n")
+debug_color = Color(0.634013, 0.524733, 0.158317, 0.42)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Coin_Areas"]
+position = Vector2(730, 198)
+shape = SubResource("RectangleShape2D_aah0n")
+debug_color = Color(0.634013, 0.524733, 0.158317, 0.42)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Coin_Areas"]
+position = Vector2(923, 451)
+shape = SubResource("RectangleShape2D_aah0n")
+debug_color = Color(0.634013, 0.524733, 0.158317, 0.42)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Coin_Areas"]
+position = Vector2(72, 596)
+shape = SubResource("RectangleShape2D_aah0n")
+debug_color = Color(0.634013, 0.524733, 0.158317, 0.42)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Coin_Areas"]
+position = Vector2(166, 71)
+shape = SubResource("RectangleShape2D_aah0n")
+debug_color = Color(0.634013, 0.524733, 0.158317, 0.42)
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Coin_Areas"]
+position = Vector2(1060, 594)
+shape = SubResource("RectangleShape2D_aah0n")
+debug_color = Color(0.634013, 0.524733, 0.158317, 0.42)
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Coin_Areas"]
+position = Vector2(608, 596)
+shape = SubResource("RectangleShape2D_aah0n")
+debug_color = Color(0.634013, 0.524733, 0.158317, 0.42)
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Coin_Areas"]
+position = Vector2(467, 201)
+shape = SubResource("RectangleShape2D_aah0n")
+debug_color = Color(0.634013, 0.524733, 0.158317, 0.42)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 327)
+
+[node name="Coins_Timer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(997, 74)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_tqwn7")
+autoplay = "default"
+frame_progress = 0.702729
+
+[node name="OCD_Hp" type="TextureProgressBar" parent="."]
+z_index = 4
+offset_left = 869.0
+offset_top = 198.0
+offset_right = 933.0
+offset_bottom = 238.0
+scale = Vector2(3.71205, 3.01972)
+step = 0.01
+value = 100.0
+texture_under = ExtResource("2_6w8l3")
+texture_progress = ExtResource("13_vh88f")
+script = ExtResource("14_vh88f")
+
+[node name="PlayerPortrait" type="Sprite2D" parent="."]
+z_index = 4
+position = Vector2(76, 29)
+scale = Vector2(1.55, 1.55)
+texture = ExtResource("15_tqwn7")
+
+[node name="Song" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_0x75u")
+volume_db = -6.0
+autoplay = true
+
+[connection signal="timeout" from="Unaligned_Timer" to="." method="_on_unaligned_timer_timeout"]
+[connection signal="timeout" from="Coins_Timer" to="." method="_on_coins_timer_timeout"]

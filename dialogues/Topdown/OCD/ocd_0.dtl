@@ -1,0 +1,17 @@
+OCD_boss: that's it for me ig... i know you were sick of my design anyway
+OCD_boss: but i don't even have an animation for dying...
+OCD_boss: i guess i'll just delete my sprite then.
+[signal arg="delete_sprite"]
+Chrysalis: No, wait!
+Chrysalis: Don't leave.
+my design must have been making you go insane anyway. this is the best for all of us.
+Chrysalis: I don't care that you're imperfect.
+Chrysalis: I guess I got a bit used to imperfection now.
+[signal arg="show_sprite"]
+OCD_boss: wtf REALLY?
+OCD_boss: ALL ME, GUYS I FIXED HER!
+Chrysalis: Haha..
+Companion: That's so cute, but guys, say your goodbyes now, the world is crumbling!
+Companion: There will always be imperfections, we just gotta learn how to live with them.
+Companion: You learned a valuable lesson!
+[signal arg="leave_scene"]

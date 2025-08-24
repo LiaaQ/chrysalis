@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjyaqj1k2ct57"]
+
+[ext_resource type="Script" uid="uid://d2ach7h33b1wi" path="res://scripts/platformer/social/eye_spawner.gd" id="1_l4hij"]
+
+[node name="EyeSpawner" type="Node2D"]
+script = ExtResource("1_l4hij")
+
+[node name="Spawn_Cooldown" type="Timer" parent="."]
+
+[connection signal="timeout" from="Spawn_Cooldown" to="." method="_on_spawn_cooldown_timeout"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b27jx1eed43yg"]
+
+[ext_resource type="Script" uid="uid://navfc7xitj3h" path="res://scripts/platformer/checkpoint_platformer.gd" id="1_ll2eg"]
+
+[node name="checkpoint_platformer" type="Area2D"]
+script = ExtResource("1_ll2eg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

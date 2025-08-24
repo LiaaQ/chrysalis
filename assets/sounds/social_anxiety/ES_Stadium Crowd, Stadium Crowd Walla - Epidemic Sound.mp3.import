@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c2nqe8mktnr4r"
+path="res://.godot/imported/ES_Stadium Crowd, Stadium Crowd Walla - Epidemic Sound.mp3-773d5320032e9f61066551b94cd99b19.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/social_anxiety/ES_Stadium Crowd, Stadium Crowd Walla - Epidemic Sound.mp3"
+dest_files=["res://.godot/imported/ES_Stadium Crowd, Stadium Crowd Walla - Epidemic Sound.mp3-773d5320032e9f61066551b94cd99b19.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

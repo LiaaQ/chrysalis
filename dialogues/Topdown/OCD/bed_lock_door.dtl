@@ -1,0 +1,10 @@
+[wait time="2.0"]
+Sarah: The door.
+Sarah: I locked it, right?
+[wait time="2.0"]
+Sarah: I did. I remember turning the key.
+[wait time="2.0"]
+Sarah: …Did I do it right?
+Sarah: What if it didn’t click?
+Sarah: I have to go check...
+[signal arg="get_up"]

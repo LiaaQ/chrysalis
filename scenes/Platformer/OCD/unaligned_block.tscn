@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://c3ldawxivlcuo"]
+
+[ext_resource type="Script" uid="uid://cd6auis7tasad" path="res://scripts/platformer/ocd/unaligned_block.gd" id="1_vrsfy"]
+[ext_resource type="AudioStream" uid="uid://dqxxxej4jhij6" path="res://assets/sounds/ES_Rocks, Rattle, Small Stones Rattling Very Fast - Epidemic Sound.mp3" id="2_lyrys"]
+[ext_resource type="AudioStream" uid="uid://dq1dwodu5ykfg" path="res://assets/sounds/ocd/ES_Slide, Descend Then Ascend - Epidemic Sound (mp3cut.net) (2).mp3" id="3_v6a4e"]
+[ext_resource type="AudioStream" uid="uid://cemgp8tdu84hp" path="res://assets/sounds/ocd/ES_Slide, Descend Then Ascend - Epidemic Sound (mp3cut.net).mp3" id="4_mnsvt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ff3y"]
+size = Vector2(48, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6a4e"]
+size = Vector2(48, 5.25)
+
+[node name="unaligned_block" type="StaticBody2D"]
+script = ExtResource("1_vrsfy")
+offset = 5.0
+
+[node name="offset" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="cooldown" type="Timer" parent="."]
+wait_time = 8.0
+one_shot = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0ff3y")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="bottom" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 26)
+shape = SubResource("RectangleShape2D_v6a4e")
+disabled = true
+debug_color = Color(0.632895, 0.524003, 0.191178, 0.42)
+
+[node name="top" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -26)
+shape = SubResource("RectangleShape2D_v6a4e")
+disabled = true
+debug_color = Color(0.632895, 0.524003, 0.191178, 0.42)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_lyrys")
+attenuation = 13.4543
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+scale = Vector2(2.4, 2.4)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.5
+offset_top = -11.5
+offset_right = 0.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ascend" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_v6a4e")
+
+[node name="descend" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_mnsvt")
+
+[connection signal="timeout" from="offset" to="." method="_on_offset_timeout"]
+[connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]

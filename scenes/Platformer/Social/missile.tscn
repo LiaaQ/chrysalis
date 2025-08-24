@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://blpbuiqrerw1f"]
+
+[ext_resource type="Script" uid="uid://fjnv70d3ecry" path="res://scripts/platformer/social/missile.gd" id="1_7gil1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7gil1"]
+size = Vector2(33, 4)
+
+[node name="Missile" type="Area2D"]
+script = ExtResource("1_7gil1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -17.0
+offset_top = -2.0
+offset_right = 23.0
+offset_bottom = 42.0
+scale = Vector2(0.828511, 0.0898959)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_7gil1")
+
+[node name="Timeout" type="Timer" parent="."]
+wait_time = 8.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timeout" to="." method="_on_timeout_timeout"]

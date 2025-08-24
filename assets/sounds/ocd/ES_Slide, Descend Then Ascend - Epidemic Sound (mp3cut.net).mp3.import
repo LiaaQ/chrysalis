@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cemgp8tdu84hp"
+path="res://.godot/imported/ES_Slide, Descend Then Ascend - Epidemic Sound (mp3cut.net).mp3-c34cdf277ac3ef5bb09ce7be1f21624b.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/ocd/ES_Slide, Descend Then Ascend - Epidemic Sound (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/ES_Slide, Descend Then Ascend - Epidemic Sound (mp3cut.net).mp3-c34cdf277ac3ef5bb09ce7be1f21624b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

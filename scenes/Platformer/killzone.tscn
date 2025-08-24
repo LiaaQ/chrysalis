@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bifus5pltkn0o"]
+
+[ext_resource type="Script" uid="uid://blsy00r4lk77e" path="res://scenes/Platformer/killzone.gd" id="1_nvxsc"]
+
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7gogp"]
+
+[node name="Killzone" type="Area2D"]
+script = ExtResource("1_nvxsc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("WorldBoundaryShape2D_7gogp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
