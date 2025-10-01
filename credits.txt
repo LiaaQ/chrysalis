@@ -1,0 +1,51 @@
+In-game dialogue was made using Dialogic: https://github.com/dialogic-godot/dialogic
+AI female voice in social anxiety level made using "ASMR Nicole": https://www.elevenlabs.io/
+Companion initial design by Chat GPT: https://chatgpt.com
+
+# Top-down:
+Assets: https://limezu.itch.io/
+Spider: https://elthen.itch.io/2d-pixel-art-spider-sprites
+Music: https://freesound.org/people/ChristmasKrumble666/sounds/744098/,
+https://pixabay.com/music/beats-lo-fi-chill-beats-with-brutalist-architecture-loop-276898/, 
+https://pixabay.com/es/music/late-nostalgic-happiness-relaxing-lofi-instrumental-323681/,
+
+
+# Platformer general
+Chrysalis: https://jumpbutton.itch.io/girlknightasset
+
+Depression:
+Platformer song: https://pixabay.com/music/alternative-into-the-darkness-symphonic-metal-instrumental-336411/
+Boss fight song: https://pixabay.com/id/music/logam-whining-intense-thrash-metal-instrumental-with-shredding-guitar-336440/
+Boss design: https://darkpixel-kronovi.itch.io/undead-executioner
+Skeleton enemy: https://astrobob.itch.io/animated-pixel-art-skeleton
+Tileset: https://penusbmic.itch.io/the-dark-series-the-city-of-bones-tilset
+Parallax: https://owmyknees.itch.io/wasteland-city-parallax-background
+
+
+Arachnophobia:
+Poem: https://www.awakin.org/v2/read/view.php\?tid=2535
+Song: https://www.epidemicsound.com/track/21yEWQBHFN/
+Spiders: https://rgsdev.itch.io/animated-spider-enemy-for-fantasy-rpg-2d-game-rgsdev
+Parallax: https://nekoindie.itch.io/pixel-dark-forest-parallax-background
+Tileset: https://craftpix.net/freebies/free-green-zone-tileset-pixel-art/
+
+Social Anxiety:
+AI female voice - "Nicole ASMR": https://www.elevenlabs.io/
+Platformer song: https://pixabay.com/music/synthwave-shimmering-energetic-synthwave-instrumental-for-running-323685/
+Bossfight song: https://freesound.org/people/Sirkoto51/sounds/443128/
+Stranger: https://jumpbutton.itch.io/2d-platformer-starter-assets
+
+
+OCD:
+Tileset: https://kevins-moms-house.itch.io/factory
+Song: https://www.epidemicsound.com/track/0EAQEt0NyH/
+Sound Effects: https://www.epidemicsound.com/sound-effects/tracks/32674568-8c31-424b-a88d-fa3aa123c5af/, https://www.epidemicsound.com/sound-effects/tracks/0e95939f-ba06-4c03-99b4-a5b7427fc69f/
+
+Nyctophobia:
+Song: https://www.epidemicsound.com/track/Rs4Q049G6V/
+Parallax: https://nekoindie.itch.io/pixel-dark-forest-parallax-background
+Lanterns: https://karsiori.itch.io/free-pixel-art-lantern-pack
+Tileset: https://craftpix.net/freebies/free-green-zone-tileset-pixel-art/
+
+Final Scene:
+https://www.epidemicsound.com/track/HN2xe28nT2/
