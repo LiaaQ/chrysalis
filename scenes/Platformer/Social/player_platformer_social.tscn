@@ -1289,21 +1289,21 @@ advance_condition = &"attacking"
 states/Attack1/node = SubResource("AnimationNodeAnimation_2lkqg")
 states/Attack1/position = Vector2(683, 174)
 states/Death/node = SubResource("AnimationNodeAnimation_74a0b")
-states/Death/position = Vector2(925, 62)
-states/End/position = Vector2(1067, 56)
+states/Death/position = Vector2(856, 47)
+states/End/position = Vector2(1053, 62)
 states/Fall/node = SubResource("AnimationNodeAnimation_s3si3")
-states/Fall/position = Vector2(456, 279)
+states/Fall/position = Vector2(456, 42)
 states/Idle/node = SubResource("AnimationNodeAnimation_cgumk")
 states/Idle/position = Vector2(225, 174)
 states/Jump/node = SubResource("AnimationNodeAnimation_enx7h")
 states/Jump/position = Vector2(225, -91)
 states/RESET/node = SubResource("AnimationNodeAnimation_kjk56")
-states/RESET/position = Vector2(103, 83)
+states/RESET/position = Vector2(105, 174)
 states/Run/node = SubResource("AnimationNodeAnimation_wd8jr")
 states/Run/position = Vector2(683, -91)
-states/Start/position = Vector2(-27, 83)
+states/Start/position = Vector2(105, 88)
 transitions = ["Start", "RESET", SubResource("AnimationNodeStateMachineTransition_enx7h"), "RESET", "Idle", SubResource("AnimationNodeStateMachineTransition_2lkqg"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_74a0b"), "Run", "Jump", SubResource("AnimationNodeStateMachineTransition_fpmi5"), "Idle", "Jump", SubResource("AnimationNodeStateMachineTransition_s3si3"), "Jump", "Run", SubResource("AnimationNodeStateMachineTransition_cgumk"), "Jump", "Idle", SubResource("AnimationNodeStateMachineTransition_kjk56"), "Run", "Attack1", SubResource("AnimationNodeStateMachineTransition_j4682"), "Jump", "Attack1", SubResource("AnimationNodeStateMachineTransition_53t0e"), "Idle", "Attack1", SubResource("AnimationNodeStateMachineTransition_h4bnl"), "Attack1", "Idle", SubResource("AnimationNodeStateMachineTransition_p6ha7"), "Attack1", "Run", SubResource("AnimationNodeStateMachineTransition_jawdw"), "Attack1", "Fall", SubResource("AnimationNodeStateMachineTransition_ickdy"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_wd8jr"), "Idle", "Fall", SubResource("AnimationNodeStateMachineTransition_xfxxi"), "Run", "Fall", SubResource("AnimationNodeStateMachineTransition_78m2a"), "Fall", "Idle", SubResource("AnimationNodeStateMachineTransition_tu1cg"), "Fall", "Run", SubResource("AnimationNodeStateMachineTransition_524fa"), "Fall", "Death", SubResource("AnimationNodeStateMachineTransition_pimnd"), "Attack1", "Death", SubResource("AnimationNodeStateMachineTransition_biu7u"), "Idle", "Death", SubResource("AnimationNodeStateMachineTransition_1iqro"), "Run", "Death", SubResource("AnimationNodeStateMachineTransition_2h2yb"), "Jump", "Death", SubResource("AnimationNodeStateMachineTransition_apj5e"), "Fall", "Attack1", SubResource("AnimationNodeStateMachineTransition_xwtrm")]
-graph_offset = Vector2(-76, -165)
+graph_offset = Vector2(-96, -260)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xwtrm"]
 radius = 32.0156

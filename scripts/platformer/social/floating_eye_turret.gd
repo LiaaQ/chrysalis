@@ -48,7 +48,7 @@ func _on_attack_timer_timeout() -> void:
 		missile.velocity = rotated_dir * missile.speed
 		missile.rotation = rotated_dir.angle()
 		missile.player = player
-		add_child(missile)
+		$Missiles.add_child(missile)
 
 func _on_free_timer_timeout() -> void:
 	queue_free()

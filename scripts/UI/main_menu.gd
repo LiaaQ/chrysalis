@@ -9,6 +9,7 @@ func _ready() -> void:
 	if Game_Manager.curr_song:
 		Game_Manager.curr_song.stop()
 	var song = Game_Manager.get_node("Level1/Sounds/Topdown_Depressing")
+	Game_Manager.curr_song = song
 	song.play()
 		
 func parse_file():
@@ -25,6 +26,8 @@ func parse_file():
 	return false
 
 func _on_button_2_pressed() -> void:
+	if Game_Manager.curr_song:
+		Game_Manager.curr_song.stop()
 	Game_Manager.spawn_position = Game_Manager.UNUSED_VECTOR
 	await Game_Manager.change_scene_fade_out("res://scenes/Top_Down/Phase1/room.tscn")
 
@@ -32,6 +35,8 @@ func _on_button_3_pressed() -> void:
 	get_tree().quit()
 
 func _on_button_pressed() -> void:
+	if Game_Manager.curr_song:
+		Game_Manager.curr_song.stop()
 	if checkpoint:
 		Game_Manager.load_checkpoint(checkpoint)
 

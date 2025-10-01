@@ -6,7 +6,9 @@ class_name Mirror
 
 func _process(_delta):
 	if not character:
+		$Reflection.visible = false
 		return
+	else: $Reflection.visible = true
 
 	var distance_y = character.global_position.y - global_position.y
 	

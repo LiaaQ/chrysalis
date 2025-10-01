@@ -534,17 +534,18 @@ states/Attack/node = SubResource("AnimationNodeBlendSpace1D_8anmd")
 states/Attack/position = Vector2(506, -43)
 states/Death/node = SubResource("AnimationNodeAnimation_8anmd")
 states/Death/position = Vector2(813, -43)
-states/End/position = Vector2(1042, 100)
+states/End/position = Vector2(1018, 100)
 states/Idle/node = SubResource("AnimationNodeAnimation_inenk")
 states/Idle/position = Vector2(506, 100)
 states/RESET/node = SubResource("AnimationNodeAnimation_k0cb3")
-states/RESET/position = Vector2(337, 79)
+states/RESET/position = Vector2(384, 100)
 states/Skill/node = SubResource("AnimationNodeBlendSpace1D_7vdu0")
 states/Skill/position = Vector2(506, 257)
+states/Start/position = Vector2(256, 100)
 states/Teleport/node = SubResource("AnimationNodeAnimation_548kr")
 states/Teleport/position = Vector2(813, 257)
 transitions = ["Start", "RESET", SubResource("AnimationNodeStateMachineTransition_law5f"), "RESET", "Idle", SubResource("AnimationNodeStateMachineTransition_8anmd"), "Idle", "Attack", SubResource("AnimationNodeStateMachineTransition_seskx"), "Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_inenk"), "Idle", "Teleport", SubResource("AnimationNodeStateMachineTransition_k0cb3"), "Teleport", "Idle", SubResource("AnimationNodeStateMachineTransition_wd01u"), "Teleport", "Death", SubResource("AnimationNodeStateMachineTransition_e57cj"), "Idle", "Death", SubResource("AnimationNodeStateMachineTransition_rkui0"), "Attack", "Death", SubResource("AnimationNodeStateMachineTransition_o64ql"), "Skill", "Death", SubResource("AnimationNodeStateMachineTransition_npy68"), "Idle", "Skill", SubResource("AnimationNodeStateMachineTransition_p626u"), "Skill", "Idle", SubResource("AnimationNodeStateMachineTransition_gtj3c"), "Death", "End", SubResource("AnimationNodeStateMachineTransition_tr0p3")]
-graph_offset = Vector2(120, 72)
+graph_offset = Vector2(103, -224)
 
 [sub_resource type="Animation" id="Animation_p626u"]
 resource_name = "Attack1"

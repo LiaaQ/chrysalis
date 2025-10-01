@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://nx22fqoklyi5"
+path="res://.godot/imported/ES_Cinematic Boom, Thud, Tension, Impact, Reverberant - Epidemic Sound.mp3-b0c8b52b2b209755317ef6b23d085edd.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/ES_Cinematic Boom, Thud, Tension, Impact, Reverberant - Epidemic Sound.mp3"
+dest_files=["res://.godot/imported/ES_Cinematic Boom, Thud, Tension, Impact, Reverberant - Epidemic Sound.mp3-b0c8b52b2b209755317ef6b23d085edd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

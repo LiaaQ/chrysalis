@@ -4904,6 +4904,7 @@ debug_color = Color(0.933333, 0.211765, 0.396078, 0.419608)
 
 [node name="Player_TopDown" parent="Assets/YSort" instance=ExtResource("33_sa0kb")]
 position = Vector2(17, 72)
+speed = 80.0
 
 [node name="Sofa" type="StaticBody2D" parent="Assets/YSort"]
 position = Vector2(209, 26)

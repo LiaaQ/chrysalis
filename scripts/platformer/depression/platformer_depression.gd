@@ -44,6 +44,13 @@ func player_power_up():
 	if curr_sat+0.1 >= 0.95:
 		Dialogic.start("full_power")
 		door_sprite.texture = preload("res://assets/platformer/depression/tileset/door_open.png")
+		$Thump.play()
 		door.dialogic_timeline = "door_open"
 		
 	player.sprite.material.set_shader_parameter("saturation_level", min(curr_sat+0.1, 1.0))
+
+
+func _on_jumpshift_body_entered(body: Node2D) -> void:
+	if body == Game_Manager.player:
+		Dialogic.start("tutorial_jump_shift")
+		$Tutorial/CollisionShape2D.set_deferred("disabled", true)

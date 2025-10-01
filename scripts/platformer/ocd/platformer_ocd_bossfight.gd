@@ -7,15 +7,17 @@ extends Node2D
 
 var unaligned_blocks: Array[UnalignedBlock] = []
 var coin_areas: Array[CollisionShape2D]
-var ocd_defeated: bool = false
+
+var dialogue_triggers: Array = [0.0, 25.0, 50.0, 75.0, 99.0]  # Boss hp thresholds
+var triggered_dialogues: Dictionary = {}  # Track triggered dialogues
 
 var anxiety: float = 0.0
 var anxiety_gain: float = 0.0
 const MAX_ANXIETY: float = 100.0
-const ANXIETY_INCREASE_BOX: float = 0.05
-const ANXIETY_INCREASE_COIN_FAIL: float = 0.1
-const ANXIETY_DECREASE_FIX: float = -0.05
-const ANXIETY_DECREASE_COIN_SUCCESS: float = -0.05
+const ANXIETY_BOX_FAIL: float = 5
+const ANXIETY_COIN_FAIL: float = 10
+const ANXIETY_BOX_SUCCESS: float = -7.5
+const ANXIETY_COIN_SUCCESS: float = -10
 
 func _ready() -> void:
 	if Game_Manager.curr_song:
@@ -29,29 +31,23 @@ func _ready() -> void:
 	for child in $Coin_Areas.get_children():
 		if child is CollisionShape2D:
 			coin_areas.append(child)
+			
+	for value in dialogue_triggers:
+		triggered_dialogues[value] = false
 	
 	Dialogic.start("OCD_boss_introduction")
 
 func _process(delta: float) -> void:
 	
 	if Dialogic.current_timeline == null and not Game_Manager.interaction_locked:
-		if ocd_hp.value == 0.0 and not ocd_defeated:
-			Dialogic.start("ocd_0")
-			ocd_defeated = true
-			ocd_hp.value += 0.1
-		elif ocd_hp.value == 25.0:
-			Dialogic.start("ocd_25")
-		elif ocd_hp.value == 50.0:
-			Dialogic.start("ocd_50")
-		elif ocd_hp.value == 75.0:
-			Dialogic.start("ocd_75")
-		elif ocd_hp.value == 99.0:
-			Dialogic.start("ocd_first_hit")
-
+		for ocd_hp_threshold in dialogue_triggers:
+			if ocd_hp.value <= ocd_hp_threshold and not triggered_dialogues[ocd_hp_threshold]:
+				trigger_dialogue_for_threshold(ocd_hp_threshold)
+		print(5*delta)
 		if anxiety_bar.value >= 100.0:
-			ocd_hp.update(-0.05)
-		anxiety_gain = clamp(anxiety_gain, -0.1, 0.05)
-		update_anxiety(anxiety_gain)
+			ocd_hp.value = max(0, ocd_hp.value - 5 * delta)
+		anxiety_gain = clamp(anxiety_gain, -5, 5)
+		update_anxiety(anxiety_gain * delta)
 		if coins_timer.paused:
 			coins_timer.paused = false
 		if unaligned_timer.paused:
@@ -59,6 +55,21 @@ func _process(delta: float) -> void:
 	else:
 		coins_timer.paused = true
 		unaligned_timer.paused = true
+
+func trigger_dialogue_for_threshold(threshold):
+	if threshold == 0.0:
+		Dialogic.start("ocd_0")
+	elif threshold == 25.0:
+		Dialogic.start("ocd_25")
+	elif threshold == 50.0:
+		Dialogic.start("ocd_50")
+	elif threshold == 75.0:
+		Dialogic.start("ocd_75")
+	elif threshold == 99.0:
+		Dialogic.start("ocd_first_hit")
+	
+	# Mark this threshold as triggered
+	triggered_dialogues[threshold] = true
 
 func _on_unaligned_timer_timeout() -> void:
 	unaligned_blocks.shuffle()
@@ -70,7 +81,7 @@ func _on_unaligned_timer_timeout() -> void:
 	else:
 		block.descend_sound.play()
 	block.unalign(offset)
-	anxiety_gain += ANXIETY_INCREASE_BOX
+	anxiety_gain += ANXIETY_BOX_FAIL
 	
 func get_random_offset():
 	var range = randf()

@@ -1,7 +1,8 @@
-[gd_scene load_steps=93 format=4 uid="uid://by6pay48a5vcx"]
+[gd_scene load_steps=94 format=4 uid="uid://by6pay48a5vcx"]
 
 [ext_resource type="Texture2D" uid="uid://bnfkan53nepxk" path="res://assets/top_down/interiors/room_builder/Room_Builder_3d_walls_32x32.png" id="1_2g462"]
 [ext_resource type="Script" uid="uid://bh53rlw67olit" path="res://scripts/top_down/room.gd" id="1_gm422"]
+[ext_resource type="FontFile" uid="uid://co0mbsq2nbccw" path="res://assets/ui/fonts/alagard.ttf" id="2_1pb8a"]
 [ext_resource type="Texture2D" uid="uid://de05y3aor2mcu" path="res://assets/top_down/interiors/room_builder/Room_Builder_Arched_Entryways_32x32.png" id="3_gp1gh"]
 [ext_resource type="Texture2D" uid="uid://dnmjl4pffeuri" path="res://assets/top_down/interiors/room_builder/Room_Builder_baseboards_32x32.png" id="4_gfpfh"]
 [ext_resource type="Texture2D" uid="uid://co24m4hq06fvt" path="res://assets/top_down/interiors/room_builder/Room_Builder_borders_32x32.png" id="5_l4mqe"]
@@ -4676,9 +4677,8 @@ size = Vector2(37, 22)
 shader = ExtResource("26_604vy")
 shader_parameter/desaturation = 0.7
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u0ju4"]
-radius = 1.95337
-height = 12.2416
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1pb8a"]
+size = Vector2(7.06994, 16.5262)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_prrn5"]
 size = Vector2(27, 28)
@@ -4743,7 +4743,7 @@ shader = ExtResource("26_604vy")
 shader_parameter/desaturation = 0.7
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f6fws"]
-size = Vector2(21, 39)
+size = Vector2(20, 39)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2e68i"]
 size = Vector2(20, 232)
@@ -4761,6 +4761,18 @@ size = Vector2(395.5, 20)
 y_sort_enabled = true
 script = ExtResource("1_gm422")
 mirror = NodePath("Assets/YSort/Mirror")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+offset = Vector2(840, 580)
+scale = Vector2(3, 3)
+transform = Transform2D(3, 0, 0, 3, 840, 580)
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 86.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.787759, 0.787759, 0.787759, 1)
+theme_override_fonts/font = ExtResource("2_1pb8a")
+text = "E - Interact"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(64.325, -12.215)
@@ -4915,9 +4927,10 @@ offset = Vector2(1.06, -25.845)
 
 [node name="Collision" type="CollisionShape2D" parent="Assets/YSort/Lamp"]
 z_index = 1
+position = Vector2(-0.499893, -1.76107)
 rotation = 1.57035
 scale = Vector2(2.04774, -1.63377)
-shape = SubResource("CapsuleShape2D_u0ju4")
+shape = SubResource("RectangleShape2D_1pb8a")
 debug_color = Color(0.933333, 0.211765, 0.396078, 0.419608)
 
 [node name="PointLight2D" type="PointLight2D" parent="Assets/YSort/Lamp"]
@@ -4977,9 +4990,8 @@ material = SubResource("ShaderMaterial_mqhc7")
 position = Vector2(223, -90)
 texture = ExtResource("17_gm422")
 
-[node name="Mirror" parent="Assets/YSort" node_paths=PackedStringArray("character") instance=ExtResource("23_mqhc7")]
+[node name="Mirror" parent="Assets/YSort" instance=ExtResource("23_mqhc7")]
 position = Vector2(-4, -97)
-character = NodePath("../Player_TopDown")
 
 [node name="CompanionLight" type="PointLight2D" parent="Assets/YSort"]
 visible = false
@@ -4995,6 +5007,7 @@ visible = false
 light_mask = 9
 z_index = 1
 position = Vector2(-72, -22)
+speed = 50.0
 
 [node name="Door" type="StaticBody2D" parent="Assets/YSort"]
 script = ExtResource("10_q5hyl")
@@ -5104,7 +5117,7 @@ offset = Vector2(0, -7.875)
 
 [node name="Collision" type="CollisionShape2D" parent="Assets/YSort/TV_Chair"]
 z_index = 1
-position = Vector2(-0.499989, -2.5)
+position = Vector2(-1, -9)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_f6fws")
 debug_color = Color(0.933333, 0.211765, 0.396078, 0.419608)

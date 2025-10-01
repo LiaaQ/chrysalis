@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 # Movement speed
-@export var speed: float = 2
+@export var speed: float = 100
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var raycast: RayCast2D = $Interaction
@@ -15,7 +15,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	# Reset velocity
-	var velocity = Vector2.ZERO
+	velocity = Vector2.ZERO
 	
 	if not Game_Manager.movement_locked:
 		# Input handling for movement
@@ -43,8 +43,9 @@ func _physics_process(delta: float) -> void:
 		# Normalize velocity to maintain consistent speed
 		if velocity.length() > 0:
 			velocity = velocity.normalized() * speed
-		position += velocity
-
+			
+		print(speed)
+		print(velocity)
 		move_and_slide()
 	else:
 		if sprite.animation.begins_with("run"):

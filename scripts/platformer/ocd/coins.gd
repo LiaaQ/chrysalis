@@ -29,7 +29,6 @@ func spawn_coins():
 
 func _on_coin_body_entered(body, coin):
 	if body == Game_Manager.player:
-		print("Coin touched:", int(coin.label.text))
 		if int(coin.label.text) == next_coin:
 			coins.erase(coin)
 			coin.queue_free()
@@ -38,7 +37,11 @@ func _on_coin_body_entered(body, coin):
 				if not Game_Manager.first_coin_fixed:
 					Dialogic.start("OCD_first_coin_fixed")
 					Game_Manager.first_coin_fixed = true
-				get_tree().current_scene.anxiety_gain += get_tree().current_scene.ANXIETY_DECREASE_COIN_SUCCESS
+				var scene = get_tree().current_scene
+				if scene:
+					scene.update_anxiety(get_tree().current_scene.ANXIETY_COIN_SUCCESS)
+					if scene.anxiety_gain and scene.anxiety_gain > 0:
+						scene.anxiety_gain = 0
 				coins = []
 				get_tree().current_scene.coins_timer.start()
 				
@@ -52,7 +55,11 @@ func _on_coin_body_entered(body, coin):
 				curr_coin.modulate = Color.RED
 				curr_coin.disconnect("body_entered", Callable(self, "_on_coin_body_entered").bind(curr_coin))
 			if not platformer_version:
-				get_tree().current_scene.update_anxiety(get_tree().current_scene.ANXIETY_INCREASE_COIN_FAIL)
+				var scene = get_tree().current_scene
+				if scene:
+					scene.update_anxiety(get_tree().current_scene.ANXIETY_COIN_FAIL)
+					if scene.anxiety_gain and scene.anxiety_gain < 0:
+						scene.anxiety_gain = 0
 				await get_tree().create_timer(4.0).timeout
 				get_tree().current_scene.coins_timer.start()
 				queue_free()

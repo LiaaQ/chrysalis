@@ -4647,9 +4647,8 @@ size = Vector2(45, 19)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgitw"]
 size = Vector2(58, 83)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u0ju4"]
-radius = 1.95337
-height = 12.2416
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l71qe"]
+size = Vector2(7.81393, 16.5259)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_prrn5"]
 size = Vector2(27, 28)
@@ -4853,9 +4852,10 @@ offset = Vector2(1.06, -25.845)
 
 [node name="Collision" type="CollisionShape2D" parent="Assets/YSort/Lamp"]
 z_index = 1
+position = Vector2(-0.500225, -1.99977)
 rotation = 1.57035
 scale = Vector2(2.04774, -1.63377)
-shape = SubResource("CapsuleShape2D_u0ju4")
+shape = SubResource("RectangleShape2D_l71qe")
 debug_color = Color(0.933333, 0.211765, 0.396078, 0.419608)
 
 [node name="PointLight2D" type="PointLight2D" parent="Assets/YSort/Lamp"]
@@ -4916,6 +4916,7 @@ character = NodePath("../Player_TopDown")
 light_mask = 9
 z_index = 1
 position = Vector2(-74, -31)
+speed = 80.0
 
 [node name="Light_Switch" type="StaticBody2D" parent="Assets/YSort"]
 position = Vector2(-10, 93)

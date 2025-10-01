@@ -10,10 +10,6 @@ func _ready() -> void:
 	Dialogic.start("Nycto_After")
 	Dialogic.signal_event.connect(_dialogic_signal)
 
-func _process(delta: float) -> void:
-	if Game_Manager.player:
-		Game_Manager.player.speed = 1.5
-
 func light():
 	canvas_modulate.visible = false
 	

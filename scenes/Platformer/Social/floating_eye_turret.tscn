@@ -227,6 +227,8 @@ autostart = true
 
 [node name="Free_Timer" type="Timer" parent="Timers"]
 
+[node name="Missiles" type="Node2D" parent="."]
+
 [connection signal="timeout" from="Timers/Blink_Timer" to="." method="_on_blink_timer_timeout"]
 [connection signal="timeout" from="Timers/Attack_Timer" to="." method="_on_attack_timer_timeout"]
 [connection signal="timeout" from="Timers/Free_Timer" to="." method="_on_free_timer_timeout"]

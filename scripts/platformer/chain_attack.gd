@@ -47,10 +47,10 @@ func update_chain():
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("get_chained"):
-		print("Player chained")
-		show_puzzle()
-		body.get_chained(chain_sequence)
-		free_chain()
+		if not body.chained:
+			show_puzzle()
+			body.get_chained(chain_sequence)
+			free_chain()
 
 func free_chain():
 	is_extending = false

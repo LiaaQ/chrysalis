@@ -14,9 +14,11 @@ collision_layer = 3
 script = ExtResource("1_sf1wn")
 
 [node name="offset" type="Timer" parent="."]
+wait_time = 0.3
 one_shot = true
 
 [node name="length" type="Timer" parent="."]
+wait_time = 0.7
 one_shot = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

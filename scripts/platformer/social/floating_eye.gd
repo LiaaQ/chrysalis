@@ -60,7 +60,7 @@ func _on_tear_timer_timeout() -> void:
 	var tear = tear_scene.instantiate()
 	tear.position = pos
 	tear.player = player
-	add_child(tear)
+	$Tears.add_child(tear)
 
 func take_damage(damage):
 	queue_free()

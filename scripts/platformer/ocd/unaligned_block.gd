@@ -65,8 +65,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 				timer_cooldown.start()
 			else:
 				get_tree().current_scene.unaligned_blocks.append(self)
-				get_tree().current_scene.anxiety_gain += get_tree().current_scene.ANXIETY_DECREASE_FIX
-
+				get_tree().current_scene.anxiety_gain += get_tree().current_scene.ANXIETY_BOX_SUCCESS
 func _on_visible_on_screen_notifier_2d_screen_entered() -> void:
 	if aligned and platformer_version:
 		timer_offset.start()

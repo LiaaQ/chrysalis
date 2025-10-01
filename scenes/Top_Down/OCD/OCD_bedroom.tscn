@@ -4845,7 +4845,6 @@ shape = SubResource("RectangleShape2D_5boe7")
 debug_color = Color(0.933333, 0.211765, 0.396078, 0.419608)
 
 [node name="Table" type="StaticBody2D" parent="Assets/YSort"]
-z_index = 1
 position = Vector2(202, -50)
 collision_layer = 65
 script = ExtResource("12_hf4pm")
@@ -4878,7 +4877,6 @@ shape = SubResource("RectangleShape2D_udiux")
 debug_color = Color(0.933333, 0.211765, 0.396078, 0.419608)
 
 [node name="TV_Chair" type="StaticBody2D" parent="Assets/YSort"]
-z_index = 1
 y_sort_enabled = true
 position = Vector2(197, -24)
 collision_layer = 65
@@ -4898,7 +4896,8 @@ shape = SubResource("RectangleShape2D_f6fws")
 debug_color = Color(0.933333, 0.211765, 0.396078, 0.419608)
 
 [node name="Player_TopDown" parent="Assets/YSort" instance=ExtResource("32_ia8p5")]
-position = Vector2(18, 74)
+position = Vector2(17, 76)
+speed = 80.0
 
 [node name="Sofa" type="StaticBody2D" parent="Assets/YSort"]
 position = Vector2(209, 26)

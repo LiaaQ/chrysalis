@@ -12,4 +12,9 @@ func _process(delta: float) -> void:
 			$CharacterInBed.visible = false
 			Game_Manager.player.visible = true
 			Game_Manager.movement_locked = false
+			if "mirror" in get_tree().current_scene:
+				get_tree().current_scene.mirror.character = Game_Manager.player
+			var label = get_tree().current_scene.get_node("CanvasLayer")
+			if label:
+				label.queue_free()
 			Dialogic.start("out_of_bed")

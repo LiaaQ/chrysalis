@@ -10051,9 +10051,8 @@ size = Vector2(30, 39)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p1jqa"]
 size = Vector2(28.5, 33)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yyokk"]
-radius = 1.95337
-height = 12.2416
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3iom"]
+size = Vector2(6.34889, 16.5262)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oog0g"]
 size = Vector2(27, 28)
@@ -10418,9 +10417,10 @@ offset = Vector2(1.06, -25.845)
 
 [node name="Collision" type="CollisionShape2D" parent="YSort/Lamp"]
 z_index = 1
+position = Vector2(0.499779, -0.500244)
 rotation = 1.57035
 scale = Vector2(2.04774, -1.63377)
-shape = SubResource("CapsuleShape2D_yyokk")
+shape = SubResource("RectangleShape2D_y3iom")
 debug_color = Color(0.933333, 0.211765, 0.396078, 0.419608)
 
 [node name="Area2D" type="Area2D" parent="YSort/Lamp"]

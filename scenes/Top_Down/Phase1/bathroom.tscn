@@ -10197,6 +10197,7 @@ shape = SubResource("RectangleShape2D_ty6ci")
 
 [node name="Player_TopDown" parent="YSort" instance=ExtResource("23_mhkqf")]
 position = Vector2(-12, 67)
+speed = 80.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(45, -26)

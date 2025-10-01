@@ -28,8 +28,6 @@ func _ready() -> void:
 		Game_Manager.curr_song = song
 
 func _process(delta: float) -> void:
-	if Game_Manager.player:
-		Game_Manager.player.speed = 1.5
 	if finished_interactions.size() > 5 and companion == null:
 		companion_light.visible = true
 		closet.dialogic_timeline = "closet2"

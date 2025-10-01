@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=4 uid="uid://caxeaxcft3wj3"]
+[gd_scene load_steps=86 format=4 uid="uid://caxeaxcft3wj3"]
 
 [ext_resource type="Texture2D" uid="uid://bx8qkvi3dyxq6" path="res://assets/top_down/interiors/room_builder/Room_Builder_Walls_32x32.png" id="1_igl1i"]
 [ext_resource type="Script" uid="uid://cp6kr4vnkdqcr" path="res://scripts/top_down/ocd/house_2.gd" id="1_o7fuw"]
@@ -60,6 +60,9 @@ size = Vector2(302, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h6ois"]
 size = Vector2(26, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2riod"]
+size = Vector2(64, 38)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dhmsi"]
 texture = ExtResource("1_igl1i")
@@ -10104,6 +10107,11 @@ debug_color = Color(0.933333, 0.211765, 0.396078, 0.419608)
 position = Vector2(259, 182.5)
 shape = SubResource("RectangleShape2D_h6ois")
 debug_color = Color(0.913725, 0.27451, 0.286275, 0.419608)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(160, -14.5)
+shape = SubResource("RectangleShape2D_2riod")
+debug_color = Color(0.887929, 0.304977, 0.325632, 0.42)
 
 [node name="Build" type="Node2D" parent="."]
 y_sort_enabled = true

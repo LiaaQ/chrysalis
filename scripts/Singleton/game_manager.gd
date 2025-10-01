@@ -133,6 +133,7 @@ func change_scene_fade_out(new_scene_path: String):
 	await tween.finished
 	
 	get_tree().change_scene_to_file(new_scene_path)
+	movement_locked = false
 	scene_fade_in()
 
 func scene_fade_in():
@@ -145,7 +146,6 @@ func scene_fade_in():
 	
 	fade_rect.visible = false
 	interaction_locked = false
-	movement_locked = false
 
 func center_fade_rect() -> void:
 	if get_viewport().get_camera_2d():

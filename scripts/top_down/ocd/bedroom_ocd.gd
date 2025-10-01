@@ -13,10 +13,6 @@ func _ready() -> void:
 	else:
 		bed.dialogic_timeline = "nycto_bed"
 
-func _process(delta: float) -> void:
-	if Game_Manager.player:
-		Game_Manager.player.speed = 1.5
-
 func light():
 	canvas_modulate.visible = false
 	

@@ -42,7 +42,7 @@ func _on_attack_timer_timeout() -> void:
 		missile.global_position = eyeball_center
 		missile.velocity = to_player * missile.speed
 		missile.rotation = to_player.angle()
-		add_child(missile)
+		$Missiles.add_child(missile)
 	
 	missile_timer.start()
 	await get_tree().create_timer(1.5).timeout
@@ -56,7 +56,7 @@ func _on_missile_timer_timeout() -> void:
 		missile.velocity = to_player * missile.speed
 		missile.rotation = to_player.angle()
 		missile.player = player
-		add_child(missile)
+		$Missiles.add_child(missile)
 
 func _on_free_timer_timeout() -> void:
 	queue_free()

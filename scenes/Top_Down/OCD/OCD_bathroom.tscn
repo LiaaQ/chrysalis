@@ -10092,6 +10092,7 @@ shape = SubResource("RectangleShape2D_bj14m")
 
 [node name="Player_TopDown" parent="YSort" instance=ExtResource("20_3ic17")]
 position = Vector2(-30, 81)
+speed = 80.0
 
 [node name="Interactable" type="StaticBody2D" parent="YSort"]
 position = Vector2(164, -116)

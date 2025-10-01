@@ -10,10 +10,6 @@ func _ready() -> void:
 	companion.sprite.modulate.a = 0
 	Dialogic.signal_event.connect(_dialogic_signal)
 
-func _process(delta: float) -> void:
-	if Game_Manager.player:
-		Game_Manager.player.speed = 1
-
 func light():
 	canvas_modulate.visible = false
 	

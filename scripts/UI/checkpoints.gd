@@ -17,8 +17,8 @@ func _on_checkpoint_button_pressed(checkpoint_name: String) -> void:
 
 	var scene = load(scene_path)
 	if scene:
-		var song = Game_Manager.get_node("Level1/Sounds/Topdown_Depressing")
-		song.stop()
+		if Game_Manager.curr_song:
+			Game_Manager.curr_song.stop()
 		get_tree().change_scene_to_packed(scene)
 	else:
 		print("Failed to load scene at:", scene_path)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=4 uid="uid://dncf41ll7f1ub"]
+[gd_scene load_steps=82 format=4 uid="uid://dncf41ll7f1ub"]
 
 [ext_resource type="Script" uid="uid://3je0wfr1r55r" path="res://scripts/top_down/ocd/outside_after_social.gd" id="1_gg1mj"]
 [ext_resource type="Texture2D" uid="uid://dqun0n4uv71qs" path="res://assets/top_down/exteriors/Godot_Autotiles_32x32.png" id="2_7tkrl"]
@@ -37,6 +37,10 @@
 [ext_resource type="PackedScene" uid="uid://c632amoyrmmy6" path="res://scenes/Top_Down/interactable_door.tscn" id="36_20juh"]
 [ext_resource type="Script" uid="uid://br0wcwyabdop6" path="res://scripts/top_down/outside/switch_characters.gd" id="37_ufpn3"]
 [ext_resource type="AudioStream" uid="uid://h5sh2qgroyc3" path="res://assets/sounds/Music/nostalgic-happiness-relaxing-lofi-instrumental-323681.mp3" id="38_7tkrl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qk4bi"]
+radius = 84.0
+height = 192.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ryoy7"]
 texture = ExtResource("2_7tkrl")
@@ -6152,10 +6156,15 @@ texture_region_size = Vector2i(32, 32)
 30:28/0 = 0
 31:28/0 = 0
 16:29/0 = 0
+16:29/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 17:29/0 = 0
+17:29/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 18:29/0 = 0
+18:29/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 19:29/0 = 0
+19:29/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.70836, -16, 16, -16, 16, 16, -2.38973, 16)
 20:29/0 = 0
+20:29/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 2.70836, -16, 2.38973, 16, -16, 16)
 21:29/0 = 0
 22:29/0 = 0
 24:29/0 = 0
@@ -6180,9 +6189,13 @@ texture_region_size = Vector2i(32, 32)
 13:30/0 = 0
 14:30/0 = 0
 16:30/0 = 0
+16:30/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 2.70836, -16, 2.38973, 16, -16, 16)
 18:30/0 = 0
+18:30/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.70836, -16, 16, -16, 16, 16, -2.38973, 16)
 19:30/0 = 0
+19:30/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.70836, -16, 16, -16, 16, 16, -2.38973, 16)
 20:30/0 = 0
+20:30/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 2.70836, -16, 2.38973, 16, -16, 16)
 21:30/0 = 0
 22:30/0 = 0
 24:30/0 = 0
@@ -6207,10 +6220,14 @@ texture_region_size = Vector2i(32, 32)
 13:31/0 = 0
 14:31/0 = 0
 16:31/0 = 0
+16:31/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 2.70836, -16, 2.38973, 16, -16, 16)
 17:31/0 = 0
 18:31/0 = 0
+18:31/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.70836, -16, 16, -16, 16, 16, -2.38973, 16)
 19:31/0 = 0
+19:31/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.70836, -16, 16, -16, 16, 16, -2.38973, 16)
 20:31/0 = 0
+20:31/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 2.70836, -16, 2.38973, 16, -16, 16)
 21:31/0 = 0
 22:31/0 = 0
 30:31/0 = 0
@@ -6230,8 +6247,11 @@ texture_region_size = Vector2i(32, 32)
 13:32/0 = 0
 14:32/0 = 0
 16:32/0 = 0
+16:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 17:32/0 = 0
+17:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 18:32/0 = 0
+18:32/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 21:32/0 = 0
 22:32/0 = 0
 24:32/0 = 0
@@ -12310,6 +12330,12 @@ npc = NodePath("YSort/NPC")
 companion = NodePath("YSort/Companion")
 
 [node name="Collisions" type="StaticBody2D" parent="."]
+z_index = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(542, -561)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_qk4bi")
 
 [node name="Tiles" type="Node2D" parent="."]
 

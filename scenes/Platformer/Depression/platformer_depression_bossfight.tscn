@@ -881,7 +881,6 @@ shape = SubResource("RectangleShape2D_6snbr")
 [node name="Undead" parent="." instance=ExtResource("3_w38m5")]
 z_index = 1
 position = Vector2(68, -668)
-speed = 150.0
 hp_max = 400
 damage = 12
 attack_cooldown_init = 3.0

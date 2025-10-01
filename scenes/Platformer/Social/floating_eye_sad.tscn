@@ -230,6 +230,8 @@ wait_time = 0.5
 
 [node name="Free_Timer" type="Timer" parent="Timers"]
 
+[node name="Tears" type="Node2D" parent="."]
+
 [connection signal="timeout" from="Timers/Blink_Timer" to="." method="_on_blink_timer_timeout"]
 [connection signal="timeout" from="Timers/Cry_Timer" to="." method="_on_cry_timer_timeout"]
 [connection signal="timeout" from="Timers/Tear_Timer" to="." method="_on_tear_timer_timeout"]

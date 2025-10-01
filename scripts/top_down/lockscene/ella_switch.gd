@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 	velocity.y = -1
 	# Normalize velocity to maintain consistent speed
 	if velocity.length() > 0:
-		velocity = velocity.normalized() * 1.5
+		velocity = velocity.normalized() * 50
 
-	position += velocity
+	position += velocity * delta
 	move_and_slide()

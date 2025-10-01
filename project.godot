@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Chrysalis"
 run/main_scene="uid://co0cr4n4n2o7e"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://bcpsiw8wpcrot"
 
 [autoload]
@@ -37,13 +37,13 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"Depression/depression_platformer_start": "res://dialogues/Platformer/Depression/depression_platformer_start.dtl",
 "Final_Scene": "res://dialogues/Topdown/Final_Scene.dtl",
 "Nycto_After": "res://dialogues/Topdown/OCD/Nycto_After.dtl",
 "OCD_boss_introduction": "res://dialogues/Platformer/ocd/OCD_boss_introduction.dtl",
 "OCD_first_block_fixed": "res://dialogues/Topdown/OCD/OCD_first_block_fixed.dtl",
 "OCD_first_coin_failed": "res://dialogues/Topdown/OCD/OCD_first_coin_failed.dtl",
 "OCD_first_coin_fixed": "res://dialogues/Topdown/OCD/OCD_first_coin_fixed.dtl",
-"Room/depression_platformer_start": "res://dialogues/Topdown/Room/depression_platformer_start.dtl",
 "arachno_finish": "res://dialogues/Platformer/arachno/arachno_finish.dtl",
 "arachno_start": "res://dialogues/Platformer/arachno/arachno_start.dtl",
 "art": "res://dialogues/Topdown/Room/art.dtl",
@@ -57,7 +57,7 @@ directories/dtl_directory={
 "crooked_picture_2": "res://dialogues/Topdown/OCD/crooked_picture_2.dtl",
 "crooked_picture_after": "res://dialogues/Topdown/Room/crooked_picture_after.dtl",
 "depression_door": "res://dialogues/Depression_Topdown/Phase1/depression_door.dtl",
-"depression_platformer_start": "res://dialogues/Platformer/Depression/depression_platformer_start.dtl",
+"depression_platformer_start": "res://dialogues/Topdown/Room/depression_platformer_start.dtl",
 "depression_win": "res://dialogues/Platformer/Depression/depression_win.dtl",
 "door_closed": "res://dialogues/Platformer/Depression/door_closed.dtl",
 "door_open": "res://dialogues/Platformer/Depression/door_open.dtl",
@@ -100,6 +100,7 @@ directories/dtl_directory={
 "switch_ocd": "res://dialogues/Topdown/OCD/switch_ocd.dtl",
 "toilet_roll": "res://dialogues/Topdown/Room/toilet_roll.dtl",
 "toilet_roll_before": "res://dialogues/Topdown/Room/toilet_roll_before.dtl",
+"tutorial_jump_shift": "res://dialogues/Platformer/Depression/tutorial_jump_shift.dtl",
 "washed_hands": "res://dialogues/Topdown/OCD/washed_hands.dtl"
 }
 layout/style_list=["res://dialogues/styles/New_File.tres", "res://dialogues/styles/social_anxiety.tres"]

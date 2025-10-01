@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=4 uid="uid://c0tkx4dxs0uuq"]
+[gd_scene load_steps=79 format=4 uid="uid://bvprcle8fgssp"]
 
 [ext_resource type="Script" uid="uid://3je0wfr1r55r" path="res://scripts/top_down/ocd/outside_after_social.gd" id="1_bpd8q"]
 [ext_resource type="Texture2D" uid="uid://dqun0n4uv71qs" path="res://assets/top_down/exteriors/Godot_Autotiles_32x32.png" id="2_osf7g"]
